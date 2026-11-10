@@ -315,3 +315,10 @@ a.card:hover { border-color: var(--brass); transform: translateY(-2px); }
 .daily-feed { height: auto; min-height: 260px; }
 .daily-score { display: flex; gap: 12px; align-items: baseline; justify-content: center; padding: 8px 0; }
 .daily-score .pct { font-size: 3.4rem; }
+.daily-top { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--line); padding-bottom: 10px; }
+.daily-cash { font-size: .9rem; color: var(--muted); }
+.daily-cash strong { font-family: var(--mono); color: var(--ink); font-size: 1.05rem; }
+.daily-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.daily-next { text-align: center; color: var(--muted); font-size: .92rem; margin: 4px 0; }
+.daily-next strong { display: block; font-family: var(--mono); color: var(--ink); font-size: 1.15rem; margin-top: 2px; }
+.daily-feed { height: 260px; min-height: 0; overflow: hidden; }

@@ -1,8 +1,9 @@
-// City Ambitions Daily (D-127): one pricing puzzle a day, the same for everyone, Wordle-style.
-// The day's product, shoppers and their price limits come from a seed made of the date, so every
-// visitor gets the same puzzle without a server. The best possible profit is found by trying every
-// stock size and price, and the score is the share of it you reached. One try a day; the result,
-// streak and best score stay in localStorage.
+// City Ambitions Daily (D-127, D-128): one puzzle a day, the same for everyone, Wordle-style.
+// You start with $1,000 and sell two products in a row: the first product's profit goes into the
+// cash you buy the second one with. The products, shoppers and their price limits come from a seed
+// made of the date, so every visitor gets the same day without a server. The best possible final
+// cash is found by trying every stock and price for both products; the score is the share of that
+// gain you reached. One try a day; result, streak and best score stay in localStorage.
 (function () {
   var root = document.querySelector("[data-daily]");
   var node = document.getElementById("daily-strings");
@@ -10,12 +11,14 @@
   var S = JSON.parse(node.textContent);
   function track(name, params) { if (window.caTrack) window.caTrack(name, params || {}); }
 
-  // Products: id, unit cost and market price in cents (EconomyCatalog.json).
+  // id, unit cost, market price in cents (EconomyCatalog.json)
   var PRODUCTS = [["umbrella", 400, 1200], ["silk_scarf", 800, 2200], ["coffee", 180, 700], ["croissant", 220, 750],
     ["denim_jacket", 2400, 6500], ["sunglasses", 600, 1800], ["scented_candle", 450, 1400], ["tote_bag", 300, 1000],
     ["city_mug", 350, 1100], ["basic_tshirt", 700, 2000]];
-  var EPOCH = Date.UTC(2026, 10, 10); // Daily #1 = 10 November 2026
+  var START_CASH = 100000;
+  var EPOCH = Date.UTC(2026, 10, 10); // Daily #1 = 10 November 2026, new puzzle at 00:00 UTC
   var dayNumber = Math.floor((Date.now() - EPOCH) / 86400000) + 1;
+  var SHOPPER_MS = 450;
 
   function mulberry32(a) {
     return function () {
@@ -26,139 +29,229 @@
     };
   }
   var rng = mulberry32(dayNumber * 7919 + 104729);
-  var p = PRODUCTS[Math.floor(rng() * PRODUCTS.length)];
-  var product = { id: p[0], cost: p[1], market: p[2], name: S.products[p[0]] };
-  var shopperCount = 14 + Math.floor(rng() * 7);
-  var shoppers = [];
-  for (var i = 0; i < shopperCount; i++) {
-    var factor = 0.55 + rng() * 1.65;
-    shoppers.push({ name: S.customers[Math.floor(rng() * S.customers.length)],
-                    limit: Math.round(product.market * factor), want: 1 + Math.floor(Math.pow(rng(), 2) * 3) });
+  function makeProduct(exclude) {
+    var p;
+    do { p = PRODUCTS[Math.floor(rng() * PRODUCTS.length)]; } while (p[0] === exclude);
+    var count = 12 + Math.floor(rng() * 7), shoppers = [];
+    for (var i = 0; i < count; i++) {
+      shoppers.push({ name: S.customers[Math.floor(rng() * S.customers.length)],
+                      limit: Math.round(p[2] * (0.55 + rng() * 1.65)), want: 1 + Math.floor(Math.pow(rng(), 2) * 3) });
+    }
+    return { id: p[0], cost: p[1], market: p[2], name: S.products[p[0]], shoppers: shoppers,
+             minPrice: Math.max(1, Math.ceil(p[2] / 200)), maxPrice: Math.floor(p[2] * 3 / 100) };
   }
-  var QTY = [];
-  for (var q = 5; q <= 60; q += 5) QTY.push(q);
-  var minPrice = Math.max(1, Math.ceil(product.market / 200));
-  var maxPrice = Math.floor(product.market * 3 / 100);
+  var first = makeProduct(null);
+  var day = [first, makeProduct(first.id)];
 
-  function run(qty, priceCents) {
+  function run(prod, qty, priceCents) {
     var left = qty, sold = 0, log = [];
-    shoppers.forEach(function (s) {
+    prod.shoppers.forEach(function (s) {
       var n = priceCents <= s.limit ? Math.min(s.want, left) : 0;
       left -= n; sold += n;
       log.push({ who: s.name, n: n, wanted: priceCents <= s.limit });
     });
-    return { sold: sold, profit: sold * priceCents - qty * product.cost, log: log };
+    return { sold: sold, profit: sold * priceCents - qty * prod.cost, log: log };
   }
-  var best = { profit: -Infinity };
-  QTY.forEach(function (q) {
-    for (var d = minPrice; d <= maxPrice; d++) {
-      var r = run(q, d * 100);
-      if (r.profit > best.profit) best = { profit: r.profit, qty: q, price: d * 100 };
+  function options(prod) {
+    var out = [];
+    for (var q = 5; q <= 60; q += 5) for (var d = prod.minPrice; d <= prod.maxPrice; d++) {
+      out.push({ qty: q, price: d * 100, spend: q * prod.cost, profit: run(prod, q, d * 100).profit });
     }
+    return out;
+  }
+  // Best final cash: try every choice for the first product, then the best affordable second.
+  var opts1 = options(day[0]), opts2 = options(day[1]);
+  function bestSecond(cash) {
+    var b = { profit: 0, qty: 0, price: 0 };
+    opts2.forEach(function (o) { if (o.spend <= cash && o.profit > b.profit) b = o; });
+    return b;
+  }
+  var best = { cash: -Infinity };
+  opts1.forEach(function (o) {
+    if (o.spend > START_CASH) return;
+    var c1 = START_CASH + o.profit, s = bestSecond(c1), total = c1 + s.profit;
+    if (total > best.cash) best = { cash: total, a: o, b: s };
   });
 
-  var fmt;
-  try { fmt = new Intl.NumberFormat(S.lang, { style: "currency", currency: "USD", maximumFractionDigits: 0 }); } catch (e) { fmt = null; }
-  function money(c) { var v = Math.round(c / 100); var t = fmt ? fmt.format(v) : "$" + v; return t.replace("-", "−"); }
-  function money2(c) {
-    try { return new Intl.NumberFormat(S.lang, { style: "currency", currency: "USD" }).format(c / 100); } catch (e) { return "$" + (c / 100).toFixed(2); }
-  }
+  var fmt0, fmt2;
+  try { fmt0 = new Intl.NumberFormat(S.lang, { style: "currency", currency: "USD", maximumFractionDigits: 0 });
+        fmt2 = new Intl.NumberFormat(S.lang, { style: "currency", currency: "USD" }); } catch (e) {}
+  function money(c) { var v = Math.round(c / 100); return (fmt0 ? fmt0.format(v) : "$" + v).replace("-", "−"); }
+  function money2(c) { return fmt2 ? fmt2.format(c / 100) : "$" + (c / 100).toFixed(2); }
   function esc(t) { var d = document.createElement("div"); d.textContent = String(t); return d.innerHTML; }
   function fill(t, map) { return t.replace(/\{(\w+)\}/g, function (_, k) { return map[k] !== undefined ? map[k] : ""; }); }
 
-  var KEY = "ca-daily";
+  var KEY = "ca-daily2";
   var store = {};
   try { store = JSON.parse(localStorage.getItem(KEY) || "{}"); } catch (e) {}
   function save() { try { localStorage.setItem(KEY, JSON.stringify(store)); } catch (e) {} }
-  var ui = { qty: 20, price: Math.round(product.market / 100) };
 
-  function header() {
-    return '<div class="daily-head"><img src="/img/prod-' + product.id + '-160.webp" alt="" width="72" height="72">' +
-      '<div><p class="label" style="margin:0">' + esc(fill(S.today, { n: dayNumber })) + "</p><h2>" + esc(product.name) + "</h2></div></div>" +
-      '<div class="panel"><div class="row"><span>' + esc(S.market) + "</span><span>" + money2(product.market) + '</span></div>' +
-      '<div class="row"><span>' + esc(S.cost) + "</span><span>" + money2(product.cost) + "</span></div></div>" +
-      '<p class="sub">' + esc(fill(S.shoppers, { n: shopperCount })) + " " + esc(S.leftovers) + "</p>";
+  var state = { step: 0, cash: START_CASH, picks: [] };
+  var ui = {};
+  function maxQty(prod) { return Math.max(0, Math.min(60, Math.floor(state.cash / prod.cost / 5) * 5)); }
+  function resetUi() {
+    var prod = day[state.step];
+    ui = { qty: Math.min(20, maxQty(prod)), price: Math.round(prod.market / 100) };
+  }
+
+  function top() {
+    return '<div class="daily-top"><span class="label" style="margin:0">' + esc(fill(S.today, { n: dayNumber })) + "</span>" +
+      '<span class="daily-cash">' + esc(S.cash) + ' <strong data-v="cash">' + money(state.cash) + "</strong></span></div>";
+  }
+  function header(prod, idx) {
+    return '<div class="daily-head"><img src="/img/prod-' + prod.id + '-160.webp" alt="" width="72" height="72">' +
+      '<div><p class="sub" style="margin:0">' + esc(fill(S.step, { i: idx + 1 })) + "</p><h2>" + esc(prod.name) + "</h2></div></div>" +
+      '<div class="panel"><div class="row"><span>' + esc(S.market) + "</span><span>" + money2(prod.market) + '</span></div>' +
+      '<div class="row"><span>' + esc(S.cost) + "</span><span>" + money2(prod.cost) + "</span></div></div>" +
+      '<p class="sub">' + esc(fill(S.shoppers, { n: prod.shoppers.length })) + " " + esc(S.leftovers) + "</p>";
+  }
+
+  function viewIntro() {
+    root.innerHTML = top() + "<h2>" + esc(fill(S.start, { cash: money(START_CASH) })) + "</h2>" +
+      '<p class="sub">' + esc(S.start_p) + "</p>" +
+      '<div class="daily-pair">' + day.map(function (p, i) {
+        return '<div class="panel" style="text-align:center"><img src="/img/prod-' + p.id + '-160.webp" alt="" width="72" height="72" style="margin:0 auto 8px;border-radius:12px">' +
+          '<p class="sub" style="margin:0">' + esc(fill(S.step, { i: i + 1 })) + "</p><strong>" + esc(p.name) + "</strong></div>";
+      }).join("") + "</div>" +
+      nextLine() + '<button class="btn btn-primary" data-begin style="width:100%">' + esc(S.begin) + "</button>";
   }
 
   function viewPlay() {
-    root.innerHTML = header() +
+    var prod = day[state.step], mq = maxQty(prod);
+    if (ui.qty > mq) ui.qty = mq;
+    root.innerHTML = top() + header(prod, state.step) +
       '<label class="daily-label">' + esc(S.qty) + ' <strong data-v="qty">' + ui.qty + "</strong></label>" +
-      '<input class="range" type="range" min="5" max="60" step="5" value="' + ui.qty + '" data-r="qty">' +
+      '<input class="range" type="range" min="0" max="' + mq + '" step="5" value="' + ui.qty + '" data-r="qty">' +
       '<label class="daily-label">' + esc(S.price) + ' <strong data-v="price">' + money(ui.price * 100) + "</strong></label>" +
-      '<input class="range" type="range" min="' + minPrice + '" max="' + maxPrice + '" step="1" value="' + ui.price + '" data-r="price">' +
-      '<div class="panel"><div class="row"><span>' + esc(S.order) + '</span><span data-v="order">' + money(ui.qty * product.cost) + "</span></div></div>" +
+      '<input class="range" type="range" min="' + prod.minPrice + '" max="' + prod.maxPrice + '" step="1" value="' + ui.price + '" data-r="price">' +
+      '<div class="panel"><div class="row"><span>' + esc(S.order) + '</span><span data-v="order">' + money(ui.qty * prod.cost) + "</span></div>" +
+      '<div class="row"><span>' + esc(S.after_order) + '</span><span data-v="left">' + money(state.cash - ui.qty * prod.cost) + "</span></div></div>" +
       '<button class="btn btn-primary" data-go style="width:100%">' + esc(S.go) + "</button>";
   }
 
-  function viewRun(qty, price) {
-    var r = run(qty, price);
-    root.innerHTML = header() + '<ul class="feed daily-feed" data-feed></ul>';
-    var ul = root.querySelector("[data-feed]");
+  function viewRun() {
+    var prod = day[state.step], qty = ui.qty, price = ui.price * 100, r = run(prod, qty, price);
+    state.cash -= qty * prod.cost;
+    root.innerHTML = top() + header(prod, state.step) +
+      '<div class="bar"><i data-v="bar" style="width:0%"></i></div><ul class="feed daily-feed" data-feed></ul>';
+    var ul = root.querySelector("[data-feed]"), bar = root.querySelector('[data-v="bar"]'), cashNode = root.querySelector('[data-v="cash"]');
     var i = 0;
+    cashNode.textContent = money(state.cash);
     var timer = setInterval(function () {
-      if (i >= r.log.length) { clearInterval(timer); finish(qty, price, r); return; }
+      if (i >= r.log.length) {
+        clearInterval(timer);
+        state.picks.push({ qty: qty, price: price, profit: r.profit, sold: r.sold });
+        setTimeout(function () { state.step === 0 ? viewBetween() : finish(); }, 700);
+        return;
+      }
       var e = r.log[i++];
+      if (e.n > 0) { state.cash += e.n * price; cashNode.textContent = money(state.cash); }
+      bar.style.width = (i * 100 / r.log.length) + "%";
       var li = document.createElement("li");
       li.className = "new";
-      if (e.n > 0) li.innerHTML = esc(fill(S.bought, { who: e.who, n: e.n })) + '<span class="amt">' + money(e.n * price) + "</span>";
-      else li.innerHTML = esc(fill(e.wanted ? S.soldout : S.walked, { who: e.who })) + '<span class="missed">' + esc(S.missed) + "</span>";
+      li.innerHTML = e.n > 0 ? esc(fill(S.bought, { who: e.who, n: e.n })) + '<span class="amt">' + money(e.n * price) + "</span>"
+        : esc(fill(e.wanted ? S.soldout : S.walked, { who: e.who })) + '<span class="missed">' + esc(S.missed) + "</span>";
       ul.insertBefore(li, ul.firstChild);
       while (ul.children.length > 6) ul.removeChild(ul.lastChild);
-    }, 140);
+    }, SHOPPER_MS);
   }
 
-  function finish(qty, price, r) {
-    var score = best.profit > 0 ? Math.max(0, Math.min(100, Math.round(r.profit * 100 / best.profit))) : 0;
-    var yesterday = store.last === dayNumber - 1;
-    store.streak = (store.last === dayNumber ? store.streak : (yesterday ? (store.streak || 0) + 1 : 1));
+  function viewBetween() {
+    var a = state.picks[0];
+    root.innerHTML = top() + "<h2>" + esc(fill(S.after1_h, { product: day[0].name })) + "</h2>" +
+      '<div class="panel"><div class="row"><span>' + esc(S.sold) + "</span><span>" + a.sold + " / " + a.qty + "</span></div>" +
+      '<div class="row"><span>' + esc(S.profit) + '</span><span class="' + (a.profit >= 0 ? "pos" : "neg") + '">' + money(a.profit) + "</span></div>" +
+      '<div class="row"><span>' + esc(S.cash) + "</span><span>" + money(state.cash) + "</span></div></div>" +
+      '<p class="sub">' + esc(fill(S.after1_p, { product: day[1].name })) + "</p>" +
+      '<button class="btn btn-primary" data-next style="width:100%">' + esc(fill(S.next_product, { product: day[1].name })) + "</button>";
+  }
+
+  function finish() {
+    var gain = state.cash - START_CASH, bestGain = best.cash - START_CASH;
+    var score = bestGain > 0 ? Math.max(0, Math.min(100, Math.round(gain * 100 / bestGain))) : 0;
+    store.streak = store.last === dayNumber ? store.streak : (store.last === dayNumber - 1 ? (store.streak || 0) + 1 : 1);
     store.last = dayNumber;
-    store["d" + dayNumber] = { qty: qty, price: price, profit: r.profit, score: score };
+    store["d" + dayNumber] = { cash: state.cash, score: score, picks: state.picks };
     store.bestScore = Math.max(store.bestScore || 0, score);
     save();
-    track("daily_result", { day: dayNumber, score: score, product: product.id, qty: qty, price_usd: price / 100 });
+    track("daily_result", { day: dayNumber, score: score, final_cash_usd: Math.round(state.cash / 100),
+                            product_1: day[0].id, product_2: day[1].id });
     viewResult();
   }
 
-  function untilTomorrow() {
-    var ms = EPOCH + dayNumber * 86400000 - Date.now();
-    var h = Math.floor(ms / 3600000), m = Math.floor((ms % 3600000) / 60000);
-    return h + ":" + (m < 10 ? "0" : "") + m;
+  // When the next puzzle opens, in the visitor's own time, with a live countdown.
+  var tick = null;
+  function nextLine() {
+    var at = new Date(EPOCH + dayNumber * 86400000), time;
+    try { time = new Intl.DateTimeFormat(S.lang, { hour: "2-digit", minute: "2-digit" }).format(at); } catch (e) { time = at.toISOString().slice(11, 16); }
+    return '<p class="daily-next">' + esc(fill(S.next_at, { time: time })) + ' <strong data-v="count"></strong></p>';
+  }
+  function startCountdown() {
+    if (tick) clearInterval(tick);
+    function update() {
+      var n = root.querySelector('[data-v="count"]');
+      if (!n) return;
+      var ms = Math.max(0, EPOCH + dayNumber * 86400000 - Date.now());
+      if (ms === 0) { window.location.reload(); return; }
+      var h = Math.floor(ms / 3600000), m = Math.floor(ms % 3600000 / 60000), s = Math.floor(ms % 60000 / 1000);
+      n.textContent = fill(S.countdown, { t: h + ":" + (m < 10 ? "0" : "") + m + ":" + (s < 10 ? "0" : "") + s });
+    }
+    update();
+    tick = setInterval(update, 1000);
   }
 
   function viewResult() {
     var mine = store["d" + dayNumber];
-    root.innerHTML = header() +
+    state.cash = mine.cash;
+    function line(i) {
+      var p = mine.picks[i] || { qty: 0, price: 0, profit: 0 };
+      return '<div class="row"><span>' + esc(day[i].name) + "</span><span>" + esc(fill(S.how, { q: p.qty, p: money(p.price) })) +
+        ' <b class="' + (p.profit >= 0 ? "pos" : "neg") + '">' + money(p.profit) + "</b></span></div>";
+    }
+    function bestLine(o, prod) {
+      return '<div class="row"><span>' + esc(prod.name) + "</span><span>" + (o.qty ? esc(fill(S.how, { q: o.qty, p: money(o.price) })) : "—") + "</span></div>";
+    }
+    root.innerHTML = top() +
       '<div class="daily-score"><span class="pct ' + (mine.score >= 80 ? "pos" : mine.score >= 50 ? "" : "neg") + '">' + mine.score + "%</span>" +
       '<span class="sub">' + esc(S.score_label) + "</span></div>" +
-      '<div class="panel">' +
-      '<div class="row"><span>' + esc(S.yours) + "</span><span>" + esc(fill(S.how, { q: mine.qty, p: money(mine.price) })) + "</span></div>" +
-      '<div class="row"><span>' + esc(S.profit) + '</span><span class="' + (mine.profit >= 0 ? "pos" : "neg") + '">' + money(mine.profit) + "</span></div>" +
-      '<div class="row"><span>' + esc(S.best) + "</span><span>" + esc(fill(S.how, { q: best.qty, p: money(best.price) })) + "</span></div>" +
-      '<div class="row"><span>' + esc(S.best_profit) + '</span><span class="pos">' + money(best.profit) + "</span></div>" +
-      '<div class="row"><span>' + esc(S.streak) + "</span><span>" + (store.streak || 1) + "</span></div></div>" +
+      '<div class="panel"><p class="label" style="margin-bottom:4px">' + esc(S.yours) + "</p>" + line(0) + line(1) +
+      '<div class="row"><span><strong>' + esc(S.final_cash) + "</strong></span><span><strong>" + money(mine.cash) + "</strong></span></div></div>" +
+      '<div class="panel"><p class="label" style="margin-bottom:4px">' + esc(S.best) + "</p>" + bestLine(best.a, day[0]) + bestLine(best.b, day[1]) +
+      '<div class="row"><span>' + esc(S.final_cash) + '</span><span class="pos">' + money(best.cash) + "</span></div></div>" +
+      '<div class="panel"><div class="row"><span>' + esc(S.streak) + "</span><span>" + (store.streak || 1) + "</span></div></div>" +
+      '<div data-leaderboard></div>' +
       '<button class="btn btn-primary" data-share style="width:100%">' + esc(S.share) + "</button>" +
-      '<p class="sub" style="text-align:center">' + esc(fill(S.next, { t: untilTomorrow() })) + "</p>" +
+      nextLine() +
       '<div class="panel" style="background:var(--green-soft)"><strong>' + esc(S.cta_h) + '</strong><p class="sub" style="margin:4px 0 12px">' + esc(S.cta_p) + "</p>" +
       '<a class="btn btn-store" href="' + S.store_url + '" rel="noopener" data-track="app_store_click" data-placement="daily-result" style="width:100%"><span><small>' +
       esc(S.store_small) + "</small>" + esc(S.store_big) + "</span></a>" +
       '<p style="margin:10px 0 0;text-align:center;font-size:.9rem"><a href="' + S.play_url + '">' + esc(S.play_link) + " →</a></p></div>";
+    startCountdown();
+    if (window.caLeaderboard) window.caLeaderboard(root.querySelector("[data-leaderboard]"), dayNumber, mine);
   }
 
   root.addEventListener("input", function (e) {
     var k = e.target.getAttribute("data-r");
     if (!k) return;
+    var prod = day[state.step];
     ui[k] = parseInt(e.target.value, 10);
     root.querySelector('[data-v="qty"]').textContent = ui.qty;
     root.querySelector('[data-v="price"]').textContent = money(ui.price * 100);
-    root.querySelector('[data-v="order"]').textContent = money(ui.qty * product.cost);
+    root.querySelector('[data-v="order"]').textContent = money(ui.qty * prod.cost);
+    root.querySelector('[data-v="left"]').textContent = money(state.cash - ui.qty * prod.cost);
   });
   root.addEventListener("click", function (e) {
-    if (e.target.closest("[data-go]")) {
-      track("daily_play", { day: dayNumber, product: product.id });
-      viewRun(ui.qty, ui.price * 100);
+    if (e.target.closest("[data-begin]")) {
+      if (tick) clearInterval(tick);
+      track("daily_play", { day: dayNumber });
+      resetUi(); viewPlay();
+    } else if (e.target.closest("[data-go]")) {
+      viewRun();
+    } else if (e.target.closest("[data-next]")) {
+      state.step = 1; resetUi(); viewPlay();
     } else if (e.target.closest("[data-share]")) {
       var mine = store["d" + dayNumber];
-      var text = fill(S.share_text, { n: dayNumber, score: mine.score, product: product.name });
+      var text = fill(S.share_text, { n: dayNumber, cash: money(mine.cash), score: mine.score });
       track("daily_share", { day: dayNumber, score: mine.score, method: navigator.share ? "share_sheet" : "copy_link" });
       if (navigator.share) { navigator.share({ title: "City Ambitions Daily", text: text, url: S.url }).catch(function () {}); return; }
       if (navigator.clipboard) navigator.clipboard.writeText(text + " " + S.url).then(function () {
@@ -167,5 +260,5 @@
     }
   });
 
-  if (store["d" + dayNumber]) viewResult(); else viewPlay();
+  if (store["d" + dayNumber]) viewResult(); else { viewIntro(); startCountdown(); }
 })();
