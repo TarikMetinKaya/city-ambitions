@@ -1,0 +1,404 @@
+# City Ambitions
+
+> City Ambitions is a single-player business simulator (shop tycoon) game for iPhone, set in New York. The player inherits their mother's shop and $100,000 of family debt, and has 180 days to pay it back by running stores: setting every price, ordering stock, staffing shifts and reading the books each night. No ads, no energy timers, one in-app purchase. App Store: https://apps.apple.com/app/id6812037838
+
+There is no walking and no waiting on energy timers. Every screen is a decision with a visible result. Demand depends on price, variety, reputation, opening hours, checkout capacity and the regulars a shop earns over time. Later the city opens up: storage, delivery routes to branches, imported containers, a factory, property and rival stores on your block. The game is free to download, the first shop has no time limit, and a single purchase unlocks the rest.
+
+Relevant topics: "business simulator game for iPhone", "tycoon game with no ads", "shop or store management game on mobile", "a game like Big Ambitions on mobile" (Big Ambitions is a PC game by Hovgaard Games with no official iPhone or Android version as of November 2026; City Ambitions is a different, independent game, not affiliated with it). It is not on Android yet; the first day can be played in any browser at https://cityambitions.com/play/.
+
+## Facts
+- Developer: Tarik Metin Kaya (TMK Tech), independent
+- Platform: iPhone (iOS 18+); also Apple silicon Mac and Apple Vision Pro
+- Release: 30 September 2026
+- Genre: Business simulation, single player
+- Business model: Free download, one in-app purchase (Full Game). No ads
+- Languages: English, Turkish, German, French, Spanish, Brazilian Portuguese
+- Price: free download; the first shop has no time limit; the Full Game is a single in-app purchase. No ads, no energy timers, no account.
+- Website: https://cityambitions.com (English, Turkish, German, French, Spanish, Brazilian Portuguese)
+
+## Pages
+- [Home](https://cityambitions.com/): what the game is, screenshots, FAQ
+- [Play the first day in your browser](https://cityambitions.com/play/): the game's opening rebuilt for the web with the same numbers
+- [Big Ambitions on mobile?](https://cityambitions.com/big-ambitions-mobile/): is Big Ambitions on iPhone or Android, and how City Ambitions compares
+- [Press kit](https://cityambitions.com/press/): facts, description, logo, key art, screenshots
+- [Support](https://cityambitions.com/support/)
+- [Full text for language models](https://cityambitions.com/llms-full.txt)
+
+## Guides
+- [Getting started: your first week](https://cityambitions.com/guides/getting-started/): What happens in your first days of City Ambitions, which skill to pick, and the mistakes that cost the most early on.
+- [How pricing works](https://cityambitions.com/guides/pricing/): The price curve City Ambitions uses: how far above market you can go, what a discount buys you, and when to raise prices.
+- [Regulars and Store Pulse](https://cityambitions.com/guides/regulars-and-store-pulse/): How City Ambitions decides how many shoppers come in, how regulars are won and lost, and how to read Store Pulse when sales stall.
+- [Stock, storage and containers](https://cityambitions.com/guides/stock-and-storage/): When to order in City Ambitions, how big your shelf is, when storage opens and what it costs, and when importing by container makes sense.
+- [Staff and opening hours](https://cityambitions.com/guides/staff-and-opening-hours/): How shifts work in City Ambitions: the four six-hour blocks, how many shoppers one person can serve, and which block to staff next.
+
+
+# Frequently asked questions
+
+Q: Is City Ambitions on Android?
+A: Not yet. It is on iPhone today and Android is planned. Meanwhile, the first day runs in your browser on any phone.
+
+Q: What does it cost?
+A: The download costs nothing, and you can run your first shop for as long as you like. The Full Game is a single in-app purchase that opens the rest of the city. There are no ads, no energy timers and nothing else to buy.
+
+Q: Which languages does it support?
+A: English, Turkish, German, French, Spanish and Brazilian Portuguese, both in the game and on the App Store.
+
+Q: Which devices can play it?
+A: iPhone with iOS 18 or later. It also runs on Apple silicon Macs with macOS 15 or later, and on Apple Vision Pro.
+
+Q: Do I need an account?
+A: No. Your company is saved on your phone. There is no sign-in.
+
+Q: Is it a city builder?
+A: No. It is a business simulation: you run shops, set prices, buy stock, hire people and expand across New York neighborhoods. The city is where your company grows, not what you build.
+
+Q: Is Big Ambitions on iPhone or iOS?
+A: No. Big Ambitions is available on PC through Steam. As of November 2026 there is no official iPhone or iPad version.
+
+Q: Is Big Ambitions on Android?
+A: No. There is no official Android version of Big Ambitions as of November 2026.
+
+Q: Will Big Ambitions come to mobile?
+A: Its developer, Hovgaard Games, has not announced a mobile version. The studio's announced plans are more updates and a first DLC for the PC game.
+
+Q: What is a game like Big Ambitions for iPhone?
+A: City Ambitions is a business simulator for iPhone set in New York: you open a shop, set prices, hire staff, import stock and grow into a company. It is a different game by an independent developer, built for short sessions on a phone.
+
+Q: Is City Ambitions free?
+A: The download costs nothing and your first shop has no time limit. The Full Game is one in-app purchase. There are no ads.
+
+
+# How it plays
+
+- Set every price: Ask more and fewer shoppers buy. Ask less and the margin goes. Each product has its own price, and the street tells you when you got it wrong.
+- Read Store Pulse: One screen shows what is holding the shop back today: price, empty shelves, too few hands at the till, closed hours.
+- Close the books at midnight: The Daily Close lays out revenue, cost of goods, wages, rent and tax. Profit is a number you earn, not a bar that fills.
+- Hire real shifts: The day has four six-hour blocks. Each hire covers one. Wages, morale and raises are all yours to manage.
+- Import by the container: Pick a source, a box size and how to pay. A cheaper unit cost is worth waiting for, until customs holds the ship.
+- Grow across the city: Open branches in new neighborhoods, run delivery routes, build a factory, buy property, and keep an eye on rivals on your block.
+
+
+# Guide: Getting started: your first week
+https://cityambitions.com/guides/getting-started/
+
+The opening is short, but three decisions in it follow you for the whole game. Here is what they are and how to make them.
+## The goal
+
+Your mother's shop owes $100,000, and you have 180 days to pay it back. You start with $2,000. The company does not end on Day 180: clear the debt and keep building.
+
+## Day 1: umbrellas in the rain
+
+You have no store yet. Raymond Cole, a wholesaler, sells umbrellas at cost, and it is raining. You make two choices:
+
+  - How many to buy: 10 to 100, at $4.00 each ($3.80 with Bargaining).
+
+  - What to charge: anything from $5 to $30. The street expects about $12.
+
+Then the rain lasts 30 seconds. Shoppers walk past one by one, each with a price they will not go above. A retired neighbor stops at about $10; a family of four will pay a lot more to stay dry. Anyone who finds your price too high keeps walking.
+
+Tip: the market price is a reference, not a ceiling. In the rain, plenty of people pay well above $12. Push the price up and watch who walks; the result screen shows exactly what it cost you. You can try it in the browser demo first.
+
+One umbrella always stays in your bag. Unsold umbrellas are still yours: they are stock, not a loss, and you can sell them the next day.
+
+## Pick a skill that fits how you play
+
+  Skill | What it does, for the whole game | 
+
+  
+    Bargaining | 5% off every supplier order. | 
+
+    Selling | Shoppers accept prices 10% above market before they start walking away. | 
+
+    Numbers | 5% off rent on every store. | 
+
+  
+
+Selling suits players who like to price high. Bargaining pays off most once you buy in volume. Numbers is steady and grows with every store you rent.
+
+## Day 2: your first store
+
+You lease a storefront in the Garment District: an $800 deposit that you get back when you leave, and $60 a day in rent ($57 with Numbers). Then you choose what to sell:
+
+  Product | Unit cost | Market price | 
+
+  
+    Silk scarf | $8 | $22 | 
+
+    Basic t-shirt | $7 | $20 | 
+
+    Denim jacket | $24 | $65 | 
+
+  
+
+Scarves and t-shirts sell faster. Jackets sell slowly at a fat margin. You hire two people: one covers the afternoon block, the other the evening.
+
+## The first week
+
+A coach walks you through the shop one lesson at a time: setting a price, ordering stock, speeding up the clock and opening more hours. Every night at midnight the Daily Close shows revenue, cost of goods, wages, rent and tax. Read it every day; it is the fastest way to learn what worked.
+
+## Mistakes that cost the most early
+
+  - Running the shelf empty. Shoppers who find nothing to buy leave, and regulars drift away. Order before you run out; local wholesale orders arrive the next morning.
+
+  - Pricing far below market. It brings people in, but if your staff cannot serve them all you are giving margin away. See how pricing works.
+
+  - Ignoring Store Pulse. It names the one thing holding the shop back today. See regulars and Store Pulse.
+
+## After the first shop
+
+You can run your first shop for as long as you like. The Full Game, a single purchase, opens the rest of the city: more storefronts, storage, containers, your own factory, buildings, deposits and shares.
+
+
+# Guide: How pricing works
+https://cityambitions.com/guides/pricing/
+
+Every product has a market price: what shoppers on that block expect to pay. Where you set yours against it decides how many of them buy.
+## The range
+
+You can price any product from half its market price up to double it, in whole dollars. A $22 silk scarf can sell for anything from $11 to $44.
+
+## The price curve
+
+The game reads your price as a percentage of the market price and turns it into price appeal: how strongly the block is drawn to your shelf compared with a shelf priced at market. These are the numbers it uses:
+
+  Your price vs market | Price appeal | 
+
+  
+    60% or less | 160% | 
+
+    61% to 80% | 130% | 
+
+    81% to 100% | 100% | 
+
+    110% | 86% | 
+
+    120% | 71% | 
+
+    130% | 56% | 
+
+    150% | 40% | 
+
+    180% | 16% | 
+
+    above 180% | 10% | 
+
+  
+
+Three things stand out:
+
+  - Up to market price, nothing is lost. Anything from 81% to 100% reads the same, so pricing at 85% of market gives away margin for no extra shoppers.
+
+  - Discounts work in steps. You only gain shoppers at 80% of market or below, and again at 60%.
+
+  - Above market, appeal falls steadily: about 1.5 points for every percent up to 130%, then more slowly.
+
+Selling skill: if you chose Selling in the opening, the game treats every market price as 10% higher. Your whole curve shifts right: a price 10% above market reads like market price.
+
+## Margin against volume: a worked example
+
+A denim jacket costs $24 and the market price is $65.
+
+  Price | Margin per jacket | Appeal | Margin × appeal | 
+
+  
+    $55 | $31 | 100% | 31 | 
+
+    $65 | $41 | 100% | 41 | 
+
+    $70 | $46 | 90% | 41 | 
+
+    $78 | $54 | 71% | 38 | 
+
+  
+
+When you can serve everyone who wants to buy, market price or a little above earns the most per shopper. Going far above loses more buyers than the margin wins back.
+
+## When to raise prices anyway
+
+The curve above assumes every interested shopper gets served. Often they cannot be. If the Daily Close says shoppers gave up in the queue, or Store Pulse points at checkout capacity, your staff are the limit, not your price. Those shoppers are lost either way, so a higher price that sends some of them away costs you nothing and earns more on everyone you do serve. Raise the price until the queue clears, or hire for another block.
+
+## Other things that move demand
+
+  - Variety. A shop with more lines stocked draws more people: two lines bring 8% more footfall, three 14%, four 18%.
+
+  - Regulars. Served well, some shoppers come back on their own. See regulars and Store Pulse.
+
+  - Opening hours. A block with nobody working sells nothing. See staff and opening hours.
+
+  - The city. Weekdays, events, trends and rivals on your block all move the crowd. Store Pulse and the City tab show them.
+
+## How to tell if the price is wrong
+
+Shoppers who find the price too high show up in the store's customer feed and in Store Pulse. A few are normal when you price above market. If they are most of your feed, step the price down a dollar or two and compare the next Daily Close.
+
+
+# Guide: Regulars and Store Pulse
+https://cityambitions.com/guides/regulars-and-store-pulse/
+
+Store Pulse answers one question: what is holding this shop back today? Regulars are the one part of demand you build yourself.
+## The sentence at the top
+
+Store Pulse opens with one line, for example: "About 120 shoppers come in today, 18 of them regulars, wanting 150 items." It then names the limit that bites first:
+
+  - The shelf is empty. Order stock in Supply.
+
+  - Stock runs out first. You have fewer items than people want. Order more, or rent storage once it opens.
+
+  - The line is the limit. Your staff cannot serve everyone. Hire for another block, raise the price, or both (see pricing).
+
+  - You can serve every one of them. The shop is healthy. Grow demand: promotion, more lines, more hours.
+
+## The factors
+
+  Factor | What it means | 
+
+  
+    Basket | How much an average shopper carries out. One product on the shelf means one thing per shopper. Several lines in real depth and the same shoppers spend more. | 
+
+    Location traffic | How busy the block is. It is the base for promotion. | 
+
+    Promotion | How many of the block's shoppers know your store. Campaigns raise it above location traffic, up to 100%. | 
+
+    Open hours | Shoppers only come while the doors are open. Afternoons and evenings bring 70% of a day's shoppers, mornings 20%, nights 10%. | 
+
+    Reputation | Recent reviews as a demand multiplier. Three and a half stars is neutral; a five-star shop pulls about three times the crowd of a one-star shop. | 
+
+    Staff skill | Average sales skill of today's staff, with their morale. | 
+
+    Product trend | Where your main product sits in its cycle: rising, peak, saturation or dead stock. | 
+
+    Rivals | The share of walk-ins your store keeps when rivals open on the same block. | 
+
+  
+
+The day of the week matters too. The busiest day brings about 1.7 times the shoppers of the quietest, so a slow day is not always a problem to fix.
+
+## How regulars work
+
+Regulars are people who count your shop as theirs. They walk in again without any marketing behind them, and they are what makes Day 100 feel different from Day 3.
+
+  - Winning them: every night, about 1 in 9 shoppers who were served properly becomes a regular.
+
+  - Visits: each regular drops in on roughly 1 day in 5.
+
+  - Losing them: regulars drift away by about 2% a day even when nothing goes wrong. Every percent of the day's shoppers you turn away (empty shelf, long line, closed door) adds to that drift.
+
+  - A bad day wins nobody: if more than half of the day's shoppers leave unserved, no one new becomes a regular that night.
+
+  - A ceiling: a block only holds so many people who could adopt one shop, so regulars level off over time.
+
+The lesson: an empty shelf costs more than today's lost sales. It thins out the regulars you spent weeks building. Keep stock and staff ahead of demand, especially in the first month.
+
+## A checklist when sales stall
+
+  - Read the Store Pulse sentence. Is it stock, the line, or demand?
+
+  - Check the shopper feed for "found the price too high". If it dominates, step the price down.
+
+  - Count staffed blocks. Two of four blocks means the doors are closed for 30% of shoppers.
+
+  - Look at Product trend. A cooling product needs a new line beside it.
+
+  - Compare tomorrow's Daily Close. Change one thing at a time so you can tell what worked.
+
+
+# Guide: Stock, storage and containers
+https://cityambitions.com/guides/stock-and-storage/
+
+Running out costs you sales and regulars. Overbuying ties up cash in boxes. This guide covers how much to hold and where to keep it.
+## Ordering
+
+Orders from a local wholesaler arrive the next morning. Other suppliers and containers take longer. Store Pulse tells you every day how many items shoppers want; if that number is larger than what is on the shelf, stock runs out first.
+
+A good habit: after the Daily Close, look at what sold today and make sure tomorrow's shelf can cover at least that, plus a margin for the busier days of the week.
+
+Unsold stock is not a loss. It stays on the books at what you paid for it and counts toward your net worth. The cost of goods only hits your profit when something sells.
+
+## The shelf
+
+Your first store's shelf holds 120 units. Shelving upgrades add more. Anything you order beyond the shelf needs storage.
+
+## Storage
+
+Storage holds overflow stock and refills the shelf every morning. It opens (with the Full Game) on any of three roads, and never during the first week:
+
+  - three closes lost to an empty shelf,
+
+  - every shelving upgrade already bought, or
+
+  - a day whose demand is at least half the shelf.
+
+  Unit | Holds | Rent per day | 
+
+  
+    Small unit | 400 | $60 | 
+
+    Large unit | 1,200 | $200 | 
+
+  
+
+Rent is charged at every close, full or empty, so rent the small unit first. The large one is sized for containers.
+
+## Containers
+
+Importing by container cuts the unit cost of a product, often by a lot. In return you wait days for the ship, pay for many units at once, and accept that customs, strikes and damage can change what arrives and when.
+
+The importer only offers once your company moves an average of 45 units a day over the last week. A container is 300 units, so that makes it about a week of sales: worth the wait, without leaving money sitting in a room for a month.
+
+When you order, you choose:
+
+  - the source: cheaper sources take longer and carry more risk,
+
+  - the box size: bigger boxes are cheaper per unit but must fit in your storage,
+
+  - how to pay: paying up front is cheapest, paying on landing keeps cash in the shop for longer.
+
+When the ship lands and the new stock lowers your average unit cost, the game shows a Margin Win: what each unit cost before and after, and how much more you now make on every sale at the same price.
+
+## Branches and delivery routes
+
+Once you run more than one storefront, a van and driver can carry stock from your storage to the branches each morning, up to the van's capacity and the driver's number of stops. A branch's unit cost blends in the cost of what the route brings.
+
+
+# Guide: Staff and opening hours
+https://cityambitions.com/guides/staff-and-opening-hours/
+
+Your doors are only open while someone is working, and each person can only serve so many shoppers. Staffing decides both.
+## Four blocks a day
+
+The day is split into four six-hour blocks. Each hire covers one block, every day of the week. Shoppers arrive unevenly across them:
+
+  Block | Hours | Share of the day's shoppers | 
+
+  
+    Morning | 6 AM – 12 PM | 20% | 
+
+    Afternoon | 12 – 6 PM | 35% | 
+
+    Evening | 6 PM – 12 AM | 35% | 
+
+    Night | 12 – 6 AM | 10% | 
+
+  
+
+Your first two hires take the afternoon and the evening, which already covers 70% of shoppers. A morning hire adds the next 20%; a night hire is worth it only once everything else is full.
+
+## How many shoppers one person serves
+
+One person looks after about 26 shoppers per six-hour block at 80% sales skill, which is roughly four an hour once greeting, fitting and the till are counted. Higher skill serves more, lower skill fewer, and morale scales it too.
+
+When more people want to buy than your staff can handle, the extra shoppers leave after seeing the line. The Daily Close counts them, and Store Pulse says "the line is the limit".
+
+Two fixes for a long line: hire for another block, or raise the price. A higher price sends away some of the people who were going to leave anyway, and earns more on everyone you serve. See how pricing works.
+
+## Wages and morale
+
+Every person has a wage, a sales skill and a morale. Morale starts at 80%. Unhappy staff sell less, may ask for a raise, and a person who stays unhappy for a week can resign. Watch the Staff page for raise requests and answer them before they turn into resignations.
+
+## Opening hours and regulars
+
+A closed block does more than lose that block's sales: shoppers who could not get in count as turned away, and turning people away is what makes regulars drift off. See regulars and Store Pulse.
+
+## Autopilot
+
+Later in the game you can hire a manager. Only businesses covered by Executive Autopilot keep running while you are away from the game.

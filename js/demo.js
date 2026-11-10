@@ -26,6 +26,8 @@
   var g = freshGame();
   var ui = { quantity: 50, price: 12 };
   var timer = null;
+  // Analytics hook from site.js (D-124); a no-op when the site has no analytics.
+  function track(name, params) { if (window.caTrack) window.caTrack(name, params || {}); }
 
   function unitCost() { return g.skill === "bargaining" ? 380 : 400; }
   function netProfit() { return g.revenue - g.sold * unitCost(); }
@@ -52,6 +54,8 @@
     if (elapsed >= SALES_HALF_SECONDS || g.stock <= 1) {
       g.step = "result";
       stop();
+      track("demo_result", { skill: g.skill, quantity: g.purchased, price_usd: g.price / 100, sold: g.sold,
+                             revenue_usd: g.revenue / 100, profit_usd: netProfit() / 100 });
     }
   }
 
@@ -90,6 +94,7 @@
   }
 
   function render() {
+    if (g.step === "sales" && renderedStep === "sales") { patchSales(); return; }
     var html = "";
     switch (g.step) {
       case "intro":
@@ -127,13 +132,11 @@
         break;
       case "sales":
         var secondsLeft = Math.max(0, 30 - Math.floor(g.elapsed / 2));
-        var feed = g.feed.length ? g.feed.map(function (f) {
-          return "<li>" + esc(f.text) + (f.units ? '<span class="amt">' + money(f.amount) + "</span>" : '<span class="missed">' + esc(S.missed) + "</span>") + "</li>";
-        }).join("") : '<li class="muted">' + esc(S.first_customer) + "</li>";
-        html = art(true) + "<h2>" + esc(S.sales_h) + '</h2><p class="sub">' + esc(S.sales_p.replace("{n}", secondsLeft)) + "</p>" +
-          '<div class="bar"><i style="width:' + Math.min(100, g.elapsed * 100 / SALES_HALF_SECONDS) + '%"></i></div>' +
-          '<div class="panel"><p class="label" style="margin-bottom:4px">' + esc(S.flow) + '</p><ul class="feed">' + feed + "</ul></div>" +
-          '<div class="panel">' + row(S.revenue, money(g.revenue), "pos") + row(S.sold, g.sold) + row(S.remaining, g.stock) + "</div>";
+        html = '<div class="demo-art demo-art-short"><img src="' + S.art.rain + '" alt="" width="1152" height="768"><div class="rain"></div></div>' +
+          "<h2>" + esc(S.sales_h) + '</h2><p class="sub" data-v="secs">' + esc(S.sales_p.replace("{n}", secondsLeft)) + "</p>" +
+          '<div class="bar"><i data-v="bar" style="width:' + Math.min(100, g.elapsed * 100 / SALES_HALF_SECONDS) + '%"></i></div>' +
+          '<div class="panel"><p class="label" style="margin-bottom:4px">' + esc(S.flow) + '</p><ul class="feed" data-v="feed">' + feedHtml() + "</ul></div>" +
+          '<div class="panel">' + row(S.revenue, money(g.revenue), "pos", "rev") + row(S.sold, g.sold, "", "sold") + row(S.remaining, g.stock, "", "left") + "</div>";
         break;
       case "result":
         var profit = netProfit();
@@ -147,12 +150,40 @@
           row(S.net, money(profit), profit >= 0 ? "pos" : "neg") + row(S.inventory, money(g.stock * unitCost())) + "</div>" +
           '<p class="sub" style="font-size:.85rem">' + esc(S.rent_note) + "</p>" +
           '<div class="panel" style="background:var(--green-soft)"><strong>' + esc(S.next_h) + '</strong><p class="sub" style="margin:4px 0 12px">' + esc(S.next_p) + "</p>" +
-          '<a class="btn btn-store" href="' + S.store_url + '" rel="noopener" style="width:100%"><span><small>' + esc(S.store_small) + "</small>" + esc(S.store_big) + "</span></a>" +
+          '<a class="btn btn-store" href="' + S.store_url + '" rel="noopener" data-track="app_store_click" data-placement="demo-result" style="width:100%"><span><small>' + esc(S.store_small) + "</small>" + esc(S.store_big) + "</span></a>" +
           "</div>" +
           '<div class="share-row"><button class="btn btn-secondary" data-act="share">' + esc(S.share) + '</button><button class="btn btn-secondary" data-act="again">' + esc(S.again) + "</button></div>";
         break;
     }
     root.innerHTML = shell(html);
+    renderedStep = g.step;
+    shownFeedId = g.feed.length ? g.feed[0].id : -1;
+  }
+
+  // While selling, only the numbers and the newest shopper change. Rebuilding the whole box every
+  // half second made the text flicker and replayed every row's animation.
+  var renderedStep = null;
+  var shownFeedId = -1;
+  function feedHtml(newestOnly) {
+    if (!g.feed.length) return '<li class="muted">' + esc(S.first_customer) + "</li>";
+    return g.feed.map(function (f) {
+      var cls = newestOnly !== undefined && f.id > newestOnly ? ' class="new"' : "";
+      return "<li" + cls + ">" + esc(f.text) + (f.units ? '<span class="amt">' + money(f.amount) + "</span>" : '<span class="missed">' + esc(S.missed) + "</span>") + "</li>";
+    }).join("");
+  }
+  function patchSales() {
+    function set(key, text) { var n = root.querySelector('[data-v="' + key + '"]'); if (n) n.textContent = text; }
+    set("secs", S.sales_p.replace("{n}", Math.max(0, 30 - Math.floor(g.elapsed / 2))));
+    set("rev", money(g.revenue)); set("sold", g.sold); set("left", g.stock);
+    var bar = root.querySelector('[data-v="bar"]');
+    if (bar) bar.style.width = Math.min(100, g.elapsed * 100 / SALES_HALF_SECONDS) + "%";
+    var cash = root.querySelector(".demo-top .cash");
+    if (cash) cash.textContent = money(g.cash);
+    var newest = g.feed.length ? g.feed[0].id : -1;
+    if (newest !== shownFeedId) {
+      root.querySelector('[data-v="feed"]').innerHTML = feedHtml(shownFeedId);
+      shownFeedId = newest;
+    }
   }
 
   function stop() { if (timer) { clearInterval(timer); timer = null; } }
@@ -192,18 +223,21 @@
     var el = e.target.closest("[data-act],[data-skill]");
     if (!el) return;
     var skill = el.getAttribute("data-skill");
-    if (skill) { g.skill = skill; g.step = "stock"; render(); return; }
+    if (skill) { g.skill = skill; g.step = "stock"; track("demo_skill", { skill: skill }); render(); return; }
     switch (el.getAttribute("data-act")) {
-      case "begin": g.step = "skill"; break;
+      case "begin": g.step = "skill"; track("demo_start"); break;
       case "stock":
         var cost = ui.quantity * unitCost();
         if (g.cash < cost) return;
         g.cash -= cost; g.purchased = ui.quantity; g.stock = ui.quantity; g.step = "price";
+        track("demo_stock", { quantity: ui.quantity });
         break;
       case "price":
         g.price = ui.price * 100; g.elapsed = 0; g.nextCustomer = 1; g.step = "sales";
+        track("demo_price", { price_usd: ui.price });
         render(); startSales(); return;
       case "again":
+        track("demo_replay");
         var keepSkill = g.skill;
         g = freshGame(); g.skill = keepSkill; g.step = "stock";
         break;
@@ -217,6 +251,7 @@
   function share(button) {
     var profit = netProfit();
     var text = (profit > 0 ? S.share_text : S.share_text_loss).replace("{profit}", money(profit));
+    track("demo_share", { method: navigator.share ? "share_sheet" : "copy_link", profit_usd: profit / 100 });
     if (navigator.share) {
       navigator.share({ title: "City Ambitions", text: text, url: S.share_url }).catch(function () {});
       return;

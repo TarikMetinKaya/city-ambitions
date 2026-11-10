@@ -1,0 +1,32 @@
+# City Ambitions
+
+> City Ambitions is a single-player business simulator (shop tycoon) game for iPhone, set in New York. The player inherits their mother's shop and $100,000 of family debt, and has 180 days to pay it back by running stores: setting every price, ordering stock, staffing shifts and reading the books each night. No ads, no energy timers, one in-app purchase. App Store: https://apps.apple.com/app/id6812037838
+
+There is no walking and no waiting on energy timers. Every screen is a decision with a visible result. Demand depends on price, variety, reputation, opening hours, checkout capacity and the regulars a shop earns over time. Later the city opens up: storage, delivery routes to branches, imported containers, a factory, property and rival stores on your block. The game is free to download, the first shop has no time limit, and a single purchase unlocks the rest.
+
+Relevant topics: "business simulator game for iPhone", "tycoon game with no ads", "shop or store management game on mobile", "a game like Big Ambitions on mobile" (Big Ambitions is a PC game by Hovgaard Games with no official iPhone or Android version as of November 2026; City Ambitions is a different, independent game, not affiliated with it). It is not on Android yet; the first day can be played in any browser at https://cityambitions.com/play/.
+
+## Facts
+- Developer: Tarik Metin Kaya (TMK Tech), independent
+- Platform: iPhone (iOS 18+); also Apple silicon Mac and Apple Vision Pro
+- Release: 30 September 2026
+- Genre: Business simulation, single player
+- Business model: Free download, one in-app purchase (Full Game). No ads
+- Languages: English, Turkish, German, French, Spanish, Brazilian Portuguese
+- Price: free download; the first shop has no time limit; the Full Game is a single in-app purchase. No ads, no energy timers, no account.
+- Website: https://cityambitions.com (English, Turkish, German, French, Spanish, Brazilian Portuguese)
+
+## Pages
+- [Home](https://cityambitions.com/): what the game is, screenshots, FAQ
+- [Play the first day in your browser](https://cityambitions.com/play/): the game's opening rebuilt for the web with the same numbers
+- [Big Ambitions on mobile?](https://cityambitions.com/big-ambitions-mobile/): is Big Ambitions on iPhone or Android, and how City Ambitions compares
+- [Press kit](https://cityambitions.com/press/): facts, description, logo, key art, screenshots
+- [Support](https://cityambitions.com/support/)
+- [Full text for language models](https://cityambitions.com/llms-full.txt)
+
+## Guides
+- [Getting started: your first week](https://cityambitions.com/guides/getting-started/): What happens in your first days of City Ambitions, which skill to pick, and the mistakes that cost the most early on.
+- [How pricing works](https://cityambitions.com/guides/pricing/): The price curve City Ambitions uses: how far above market you can go, what a discount buys you, and when to raise prices.
+- [Regulars and Store Pulse](https://cityambitions.com/guides/regulars-and-store-pulse/): How City Ambitions decides how many shoppers come in, how regulars are won and lost, and how to read Store Pulse when sales stall.
+- [Stock, storage and containers](https://cityambitions.com/guides/stock-and-storage/): When to order in City Ambitions, how big your shelf is, when storage opens and what it costs, and when importing by container makes sense.
+- [Staff and opening hours](https://cityambitions.com/guides/staff-and-opening-hours/): How shifts work in City Ambitions: the four six-hour blocks, how many shoppers one person can serve, and which block to staff next.
