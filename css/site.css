@@ -328,3 +328,7 @@ a.card:hover { border-color: var(--brass); transform: translateY(-2px); }
 .lb-form { display: flex; gap: 8px; margin-top: 12px; }
 .lb-form .input { min-height: 44px; padding: 10px 12px; }
 .lb-form .btn { flex: none; min-height: 44px; padding: 10px 14px; font-size: .92rem; }
+/* Name field full width, button underneath (Tarik, 10 Nov: the field looked tiny) */
+.lb-form { flex-direction: column; align-items: stretch; }
+.lb-form .input { width: 100%; font-size: 1rem; min-height: 48px; }
+.lb-form .btn { width: 100%; }
