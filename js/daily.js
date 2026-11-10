@@ -227,7 +227,90 @@
       esc(S.store_small) + "</small>" + esc(S.store_big) + "</span></a>" +
       '<p style="margin:10px 0 0;text-align:center;font-size:.9rem"><a href="' + S.play_url + '">' + esc(S.play_link) + " →</a></p></div>";
     startCountdown();
-    if (window.caLeaderboard) window.caLeaderboard(root.querySelector("[data-leaderboard]"), dayNumber, mine);
+    leaderboard(root.querySelector("[data-leaderboard]"), mine);
+  }
+
+  // ---- Leaderboard (D-129) ------------------------------------------------------------------
+  // Firestore daily/{day}/scores/{playerId}: name, the four choices, claimed final cash, language.
+  // Rules allow create only, for today or yesterday. Every entry is replayed here with the same
+  // simulation; an entry whose cash does not match its choices is not shown.
+  var FS = "https://firestore.googleapis.com/v1/projects/" + S.fb_project + "/databases/(default)/documents";
+  function replay(q1, p1, q2, p2) {
+    var c = START_CASH;
+    if (q1 % 5 || q1 < 0 || q1 > 60 || q1 * day[0].cost > c) return null;
+    if (p1 < day[0].minPrice || p1 > day[0].maxPrice) return null;
+    c += run(day[0], q1, p1 * 100).profit;
+    if (q2 % 5 || q2 < 0 || q2 > 60 || q2 * day[1].cost > c) return null;
+    if (q2 > 0 && (p2 < day[1].minPrice || p2 > day[1].maxPrice)) return null;
+    if (q2 > 0) c += run(day[1], q2, p2 * 100).profit;
+    return c;
+  }
+  function playerId() {
+    if (!store.pid) {
+      var a = new Uint8Array(12); (window.crypto || {}).getRandomValues ? crypto.getRandomValues(a) : a.forEach(function (_, i) { a[i] = Math.random() * 256; });
+      store.pid = Array.from(a).map(function (b) { return ("0" + b.toString(16)).slice(-2); }).join(""); save();
+    }
+    return store.pid;
+  }
+  function fsValue(v) { return v.integerValue !== undefined ? parseInt(v.integerValue, 10) : v.stringValue; }
+  function loadBoard() {
+    var body = { structuredQuery: { from: [{ collectionId: "scores" }], orderBy: [{ field: { fieldPath: "cash" }, direction: "DESCENDING" }], limit: 200 } };
+    return fetch(FS + "/daily/" + dayNumber + ":runQuery?key=" + S.fb_key, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) })
+      .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+      .then(function (rows) {
+        var out = [];
+        rows.forEach(function (row) {
+          if (!row.document) return;
+          var f = {}; Object.keys(row.document.fields).forEach(function (k) { f[k] = fsValue(row.document.fields[k]); });
+          var cash = replay(f.q1, f.p1, f.q2, f.p2);
+          if (cash === null || cash !== f.cash) return; // does not add up: not shown
+          out.push({ id: row.document.name.split("/").pop(), name: f.name, cash: cash });
+        });
+        out.sort(function (a, b) { return b.cash - a.cash; });
+        return out;
+      });
+  }
+  function submit(name, mine) {
+    var p = mine.picks, fields = { name: { stringValue: name }, lang: { stringValue: S.code },
+      q1: { integerValue: p[0].qty }, p1: { integerValue: p[0].price / 100 },
+      q2: { integerValue: p[1] ? p[1].qty : 0 }, p2: { integerValue: p[1] && p[1].qty ? p[1].price / 100 : 0 },
+      cash: { integerValue: Math.round(mine.cash) } };
+    return fetch(FS + "/daily/" + dayNumber + "/scores?documentId=" + playerId() + "&key=" + S.fb_key,
+      { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ fields: fields }) })
+      .then(function (r) { if (!r.ok && r.status !== 409) throw new Error(r.status); });
+  }
+  function leaderboard(box, mine) {
+    if (!box || !S.fb_key) return;
+    box.innerHTML = '<div class="panel"><p class="label" style="margin-bottom:6px">' + esc(S.lb_h) + '</p><div data-lb>' + esc(S.lb_loading) + "</div></div>";
+    var list = box.querySelector("[data-lb]");
+    function draw(rows) {
+      var me = store.pid, myRank = -1;
+      rows.forEach(function (r, i) { if (r.id === me) myRank = i; });
+      var html = rows.length ? "" : '<p class="sub">' + esc(S.lb_empty) + "</p>";
+      rows.slice(0, 20).forEach(function (r, i) {
+        html += '<div class="row lb-row' + (r.id === me ? " lb-me" : "") + '"><span>' + (i + 1) + ". " + esc(r.name) + "</span><span>" + money(r.cash) + "</span></div>";
+      });
+      if (myRank >= 20) html += '<div class="row lb-row lb-me"><span>' + (myRank + 1) + ". " + esc(rows[myRank].name) + "</span><span>" + money(rows[myRank].cash) + "</span></div>";
+      if (myRank >= 0) html += '<p class="sub" style="margin:8px 0 0">' + esc(fill(S.lb_rank, { r: myRank + 1, n: rows.length })) + "</p>";
+      if (!store["lb" + dayNumber]) {
+        html += '<form class="lb-form" data-lb-form><input class="input" name="n" maxlength="16" minlength="2" required placeholder="' + esc(S.lb_name) +
+          '" value="' + esc(store.nick || "") + '"><button class="btn btn-secondary" type="submit">' + esc(S.lb_join) + "</button></form>";
+      }
+      list.innerHTML = html;
+      var form = list.querySelector("[data-lb-form]");
+      if (form) form.addEventListener("submit", function (ev) {
+        ev.preventDefault();
+        var name = form.n.value.trim().replace(/\s+/g, " ");
+        if (!/^[\p{L}\p{N} ._-]{2,16}$/u.test(name)) { form.n.focus(); return; }
+        form.querySelector("button").disabled = true;
+        submit(name, mine).then(function () {
+          store["lb" + dayNumber] = true; store.nick = name; save();
+          track("daily_leaderboard_join", { day: dayNumber });
+          return loadBoard().then(draw);
+        }).catch(function () { list.insertAdjacentHTML("beforeend", '<p class="sub neg">' + esc(S.lb_err) + "</p>"); form.querySelector("button").disabled = false; });
+      });
+    }
+    loadBoard().then(draw).catch(function () { list.innerHTML = '<p class="sub">' + esc(S.lb_err) + "</p>"; });
   }
 
   root.addEventListener("input", function (e) {

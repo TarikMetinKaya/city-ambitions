@@ -322,3 +322,9 @@ a.card:hover { border-color: var(--brass); transform: translateY(-2px); }
 .daily-next { text-align: center; color: var(--muted); font-size: .92rem; margin: 4px 0; }
 .daily-next strong { display: block; font-family: var(--mono); color: var(--ink); font-size: 1.15rem; margin-top: 2px; }
 .daily-feed { height: 260px; min-height: 0; overflow: hidden; }
+.lb-row { border-bottom: 1px solid var(--line); }
+.lb-row:last-of-type { border-bottom: 0; }
+.lb-me { font-weight: 700; color: var(--action); }
+.lb-form { display: flex; gap: 8px; margin-top: 12px; }
+.lb-form .input { min-height: 44px; padding: 10px 12px; }
+.lb-form .btn { flex: none; min-height: 44px; padding: 10px 14px; font-size: .92rem; }
