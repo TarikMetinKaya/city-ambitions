@@ -30,6 +30,7 @@ Relevant topics: "business simulator game for iPhone", "tycoon game with no ads"
 - [Regulars and Store Pulse](https://cityambitions.com/guides/regulars-and-store-pulse/): How City Ambitions decides how many shoppers come in, how regulars are won and lost, and how to read Store Pulse when sales stall.
 - [Stock, storage and containers](https://cityambitions.com/guides/stock-and-storage/): When to order in City Ambitions, how big your shelf is, when storage opens and what it costs, and when importing by container makes sense.
 - [Staff and opening hours](https://cityambitions.com/guides/staff-and-opening-hours/): How shifts work in City Ambitions: the four six-hour blocks, how many shoppers one person can serve, and which block to staff next.
+- [The best business sim games on iPhone, and games like Big Ambitions on mobile (2026)](https://cityambitions.com/guides/business-sim-games-iphone/): Business simulator and tycoon games for iPhone in 2026, what each one is like, and which come closest to Big Ambitions on a phone. Written by the maker of City Ambitions.
 
 
 # Frequently asked questions
@@ -402,3 +403,111 @@ A closed block does more than lose that block's sales: shoppers who could not ge
 ## Autopilot
 
 Later in the game you can hire a manager. Only businesses covered by Executive Autopilot keep running while you are away from the game.
+
+
+# Guide: The best business sim games on iPhone, and games like Big Ambitions on mobile (2026)
+https://cityambitions.com/guides/business-sim-games-iphone/
+
+Looking for a real business simulator on your phone, or something like Big Ambitions for iPhone? Here is what is out there in 2026, what each game is actually about, and how to choose.
+Full disclosure: we make City Ambitions, the first game on this list. Every other game here is made by someone else and is listed because it is worth knowing about.
+
+## First: is Big Ambitions on mobile?
+
+No. Big Ambitions is a PC game by Hovgaard Games, sold on Steam, and as of November 2026 it has no official iPhone or Android version. If you want that kind of game on a phone, you need a different game. The details are on our Big Ambitions mobile page.
+
+## What makes a good business sim (and not just an idle clicker)
+
+Many games in the App Store's tycoon section are idle games: numbers go up while you wait, and the main decision is which upgrade to tap. A business simulator is different. Look for:
+
+  - Prices you set yourself, with demand that reacts to them.
+
+  - Costs that can sink you: rent, wages, stock that does not sell.
+
+  - Staff and opening hours that limit how much you can sell.
+
+  - A way to grow: more stores, better suppliers, your own production.
+
+  - Few or no timers and ads standing between you and your next decision.
+
+## The list
+
+### 1. City Ambitions: the closest thing to Big Ambitions on iPhone
+
+A single-player business simulator set in New York. You inherit your mother's shop and $100,000 of family debt, and you have 180 days to clear it. You set every price, order every box, staff four six-hour shifts and read a full profit and loss every night. Later you open branches in other neighborhoods, rent storage, run delivery routes, import containers, build a factory and face rival stores on your block.
+
+  - Best for: players who want real numbers and real decisions, Big Ambitions fans on a phone.
+
+  - Model: free download, the first shop has no time limit, one purchase unlocks the rest. No ads, no energy timers.
+
+  - Platforms: iPhone (also Apple silicon Mac and Apple Vision Pro). Not on Android yet.
+
+  - Try it: play the first day in your browser, or get it on the App Store.
+
+### 2. Sim Companies: an online economy with other players
+
+A multiplayer business game where you build production chains and trade on a market made of other real players. Prices come from them, not from a script. It is closer to an economic strategy game than to running a single shop, and it rewards patience over weeks.
+
+  - Best for: players who like markets, supply chains and competing with real people.
+
+  - Platforms: iPhone, Android and web.
+
+### 3. Game Dev Tycoon: run a game studio
+
+You start in a garage making games and grow into a studio, choosing topics, genres and platforms and reading reviews of what you ship. A small, focused management game with a clear goal and a strong sense of progress.
+
+  - Best for: players who want a contained story of building a company from nothing.
+
+  - Platforms: iPhone, Android and PC.
+
+### 4. Good Pizza, Great Pizza: a small shop, one customer at a time
+
+A pizza shop where you read each customer's order, make the pizza and earn enough to buy better equipment. Lighter than a full business sim, but it captures the feeling of running a shop day by day.
+
+  - Best for: short, relaxed sessions with a shop at the center.
+
+  - Platforms: iPhone, Android and PC.
+
+### 5. Business Inc. and Business Empire: big-company fantasies
+
+Both are popular tycoon games about growing a fortune across many kinds of businesses. They lean toward the empire-building fantasy and fast progress rather than the details of one store's pricing and staffing.
+
+  - Best for: players who want scale and quick growth.
+
+  - Platforms: iPhone and Android.
+
+### 6. Founder Sim: a startup instead of a shop
+
+A newer iPhone game (2026) about founding and running a startup. If your interest is the company side, such as hiring, funding and product, rather than retail, it is worth a look.
+
+  - Platforms: iPhone.
+
+## How to choose
+
+  If you want... | Try | 
+
+  
+    Big Ambitions on your phone: a shop in New York, prices, staff, expansion | City Ambitions | 
+
+    A real player-driven market | Sim Companies | 
+
+    A compact company story | Game Dev Tycoon | 
+
+    A light, cozy shop | Good Pizza, Great Pizza | 
+
+    Fast empire-building | Business Inc., Business Empire | 
+
+  
+
+## Questions
+
+### What is the most realistic business simulator on iPhone?
+
+It depends on what you mean by realistic. For running a store, with prices, demand, wages, rent, tax and stock, City Ambitions models each of those directly. For a market made of real players, Sim Companies is the deepest.
+
+### Are there business sim games without ads?
+
+Yes. City Ambitions has no ads at all, and several of the games above sell a one-time purchase instead of showing ads. Check each game's App Store page for its current model.
+
+### Is there a game like Big Ambitions for Android?
+
+Big Ambitions itself is not on Android. Sim Companies and Game Dev Tycoon are on Android; City Ambitions is iPhone-only for now, but its first day runs in any phone's browser.
