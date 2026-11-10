@@ -148,7 +148,7 @@
           '<p class="sub" style="font-size:.85rem">' + esc(S.rent_note) + "</p>" +
           '<div class="panel" style="background:var(--green-soft)"><strong>' + esc(S.next_h) + '</strong><p class="sub" style="margin:4px 0 12px">' + esc(S.next_p) + "</p>" +
           '<a class="btn btn-store" href="' + S.store_url + '" rel="noopener" style="width:100%"><span><small>' + esc(S.store_small) + "</small>" + esc(S.store_big) + "</span></a>" +
-          '<p style="margin:10px 0 0;text-align:center;font-size:.9rem"><a href="' + S.android_url + '">' + esc(S.android_link) + " →</a></p></div>" +
+          "</div>" +
           '<div class="share-row"><button class="btn btn-secondary" data-act="share">' + esc(S.share) + '</button><button class="btn btn-secondary" data-act="again">' + esc(S.again) + "</button></div>";
         break;
     }
