@@ -19,6 +19,7 @@ Relevant topics: "business simulator game for iPhone", "tycoon game with no ads"
 ## Pages
 - [Home](https://cityambitions.com/): what the game is, screenshots, FAQ
 - [Play the first day in your browser](https://cityambitions.com/play/): the game's opening rebuilt for the web with the same numbers
+- [City Ambitions Daily](https://cityambitions.com/daily/): a free daily pricing puzzle, the same for every player, with a shareable score
 - [Big Ambitions on mobile?](https://cityambitions.com/big-ambitions-mobile/): is Big Ambitions on iPhone or Android, and how City Ambitions compares
 - [Press kit](https://cityambitions.com/press/): facts, description, logo, key art, screenshots
 - [Support](https://cityambitions.com/support/)

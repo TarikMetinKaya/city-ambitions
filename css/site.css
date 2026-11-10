@@ -304,3 +304,14 @@ a.card:hover { border-color: var(--brass); transform: translateY(-2px); }
 .consent-inner p a { color: var(--ink); }
 .consent-actions { display: flex; gap: 10px; flex: 0 0 auto; }
 .consent-actions .btn { min-height: 44px; padding: 10px 18px; font-size: .95rem; }
+
+/* Daily puzzle (D-127) */
+.daily-body { height: auto; min-height: 640px; overflow: visible; }
+.daily-head { display: flex; gap: 14px; align-items: center; }
+.daily-head img { border-radius: 14px; background: var(--raised); }
+.daily-head h2 { margin: 0; }
+.daily-label { display: flex; justify-content: space-between; font-weight: 600; margin-top: 4px; }
+.daily-label strong { font-family: var(--mono); }
+.daily-feed { height: auto; min-height: 260px; }
+.daily-score { display: flex; gap: 12px; align-items: baseline; justify-content: center; padding: 8px 0; }
+.daily-score .pct { font-size: 3.4rem; }
