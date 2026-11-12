@@ -26,7 +26,7 @@
   var g = freshGame();
   var ui = { quantity: 50, price: 12 };
   var timer = null;
-  // Analytics hook from site.js (D-124); a no-op when the site has no analytics.
+  // Analytics hook from site.js (D-162); a no-op when the site has no analytics.
   function track(name, params) { if (window.caTrack) window.caTrack(name, params || {}); }
 
   function unitCost() { return g.skill === "bargaining" ? 380 : 400; }

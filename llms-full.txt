@@ -1,37 +1,43 @@
 # City Ambitions
 
-> City Ambitions is a single-player business simulator (shop tycoon) game for iPhone, set in New York. The player inherits their mother's shop and $100,000 of family debt, and has 180 days to pay it back by running stores: setting every price, ordering stock, staffing shifts and reading the books each night. No ads, no energy timers, one in-app purchase. App Store: https://apps.apple.com/app/id6812037838
+> City Ambitions is a single-player business simulator (shop tycoon) game for iPhone, set in New York. The player inherits their mother's shop and $100,000 of family debt, and has 180 days to pay it back by running stores: setting every price, ordering stock, staffing shifts and reading the books each night. Free to start; one purchase unlocks the full game. App Store: https://apps.apple.com/app/id6812037838
 
 There is no walking and no waiting on energy timers. Every screen is a decision with a visible result. Demand depends on price, variety, reputation, opening hours, checkout capacity and the regulars a shop earns over time. Later the city opens up: storage, delivery routes to branches, imported containers, a factory, property and rival stores on your block. The game is free to download, the first shop has no time limit, and a single purchase unlocks the rest.
 
-Relevant topics: "business simulator game for iPhone", "tycoon game with no ads", "shop or store management game on mobile", "a game like Big Ambitions on mobile" (Big Ambitions is a PC game by Hovgaard Games with no official iPhone or Android version as of November 2026; City Ambitions is a different, independent game, not affiliated with it). It is not on Android yet; the first day can be played in any browser at https://cityambitions.com/play/.
+Relevant topics: "business simulator game for iPhone", "supermarket simulator on iPhone", "factory tycoon game", "shop or store management game on mobile", "business sim that plays offline". The first day can be played in any browser at https://cityambitions.com/play/, and a daily pricing puzzle at https://cityambitions.com/daily/.
 
 ## Facts
 - Developer: Tarik Metin Kaya (TMK Tech), independent
 - Platform: iPhone (iOS 18+); also Apple silicon Mac and Apple Vision Pro
 - Release: 30 September 2026
 - Genre: Business simulation, single player
-- Business model: Free download, one in-app purchase (Full Game). No ads
+- Business model: Free to start, one in-app purchase unlocks the full game
 - Languages: English, Turkish, German, French, Spanish, Brazilian Portuguese
-- Price: free download; the first shop has no time limit; the Full Game is a single in-app purchase. No ads, no energy timers, no account.
+- Price: free to start; one in-app purchase unlocks the full game. No energy timers, no account.
+- Version 1.2 (late November 2026): supermarket with shelf life and fridges, fast food rush hours with a kitchen and cooks, a recipe factory (raw materials, machines, make or buy), four or more products in every store and branch, container imports with payment options, delivery contracts, three delivery vehicles, luxury life and bank loans.
 - Website: https://cityambitions.com (English, Turkish, German, French, Spanish, Brazilian Portuguese)
 
 ## Pages
 - [Home](https://cityambitions.com/): what the game is, screenshots, FAQ
 - [Play the first day in your browser](https://cityambitions.com/play/): the game's opening rebuilt for the web with the same numbers
 - [City Ambitions Daily](https://cityambitions.com/daily/): a free daily pricing puzzle, the same for every player, with a shareable score
-- [Big Ambitions on mobile?](https://cityambitions.com/big-ambitions-mobile/): is Big Ambitions on iPhone or Android, and how City Ambitions compares
 - [Press kit](https://cityambitions.com/press/): facts, description, logo, key art, screenshots
 - [Support](https://cityambitions.com/support/)
 - [Full text for language models](https://cityambitions.com/llms-full.txt)
 
 ## Guides
 - [Getting started: your first week](https://cityambitions.com/guides/getting-started/): What happens in your first days of City Ambitions, which skill to pick, and the mistakes that cost the most early on.
+- [Factory tycoon game on iPhone: make it yourself or buy it wholesale](https://cityambitions.com/guides/factory-tycoon-game-iphone/): A factory tycoon game for iPhone where the factory feeds your own stores: recipes, raw materials, machines and the make-or-buy decision in City Ambitions 1.2.
+- [How to clear $100,000 of debt in 180 days in City Ambitions](https://cityambitions.com/guides/clear-100000-debt-in-180-days/): A day-by-day plan for City Ambitions' main goal: what the game counts on Day 180, how to grow company value fast, and the mistakes that leave you short.
+- [Business sim economy guide: pricing, stock and staff, explained with real numbers](https://cityambitions.com/guides/business-sim-economy-guide/): How the economy of a business simulator works, using City Ambitions as the worked example: where profit comes from, how price, stock and staff interact, and the numbers to watch.
 - [How pricing works](https://cityambitions.com/guides/pricing/): The price curve City Ambitions uses: how far above market you can go, what a discount buys you, and when to raise prices.
 - [Regulars and Store Pulse](https://cityambitions.com/guides/regulars-and-store-pulse/): How City Ambitions decides how many shoppers come in, how regulars are won and lost, and how to read Store Pulse when sales stall.
 - [Stock, storage and containers](https://cityambitions.com/guides/stock-and-storage/): When to order in City Ambitions, how big your shelf is, when storage opens and what it costs, and when importing by container makes sense.
 - [Staff and opening hours](https://cityambitions.com/guides/staff-and-opening-hours/): How shifts work in City Ambitions: the four six-hour blocks, how many shoppers one person can serve, and which block to staff next.
-- [The best business sim games on iPhone, and games like Big Ambitions on mobile (2026)](https://cityambitions.com/guides/business-sim-games-iphone/): Business simulator and tycoon games for iPhone in 2026, what each one is like, and which come closest to Big Ambitions on a phone. Written by the maker of City Ambitions.
+- [The best business sim games on iPhone (2026)](https://cityambitions.com/guides/business-sim-games-iphone/): Business simulator and tycoon games for iPhone in 2026, what each one is like and how to choose. Written by the maker of City Ambitions.
+- [Supermarket simulator on iPhone: run a grocery store that can spoil](https://cityambitions.com/guides/supermarket-simulator-iphone/): What a supermarket simulator on iPhone should let you do, and how the supermarket in City Ambitions works: big baskets, thin margins, shelf life and fridges.
+- [Offline business tycoon games for iPhone, and how to spot the ad-heavy ones](https://cityambitions.com/guides/offline-business-tycoon-games-iphone/): Business and tycoon games you can play on iPhone without a connection, and how to tell a real business sim from an idle game built around ads and timers.
+- [How to run a store in a business sim: pricing, stock and staff tips](https://cityambitions.com/guides/how-to-run-a-store-business-sim/): The basics of running a shop in any business simulator, with real examples from City Ambitions: how to price, how much stock to hold, and how to staff for the crowd.
 
 
 # Frequently asked questions
@@ -40,7 +46,7 @@ Q: Is City Ambitions on Android?
 A: Not yet. It is on iPhone today and Android is planned. Meanwhile, the first day runs in your browser on any phone.
 
 Q: What does it cost?
-A: The download costs nothing, and you can run your first shop for as long as you like. The Full Game is a single in-app purchase that opens the rest of the city. There are no ads, no energy timers and nothing else to buy.
+A: The download costs nothing and you can run your first shop for as long as you like. One in-app purchase unlocks the full game and the rest of the city. There are no energy timers.
 
 Q: Which languages does it support?
 A: English, Turkish, German, French, Spanish and Brazilian Portuguese, both in the game and on the App Store.
@@ -53,21 +59,6 @@ A: No. Your company is saved on your phone. There is no sign-in.
 
 Q: Is it a city builder?
 A: No. It is a business simulation: you run shops, set prices, buy stock, hire people and expand across New York neighborhoods. The city is where your company grows, not what you build.
-
-Q: Is Big Ambitions on iPhone or iOS?
-A: No. Big Ambitions is available on PC through Steam. As of November 2026 there is no official iPhone or iPad version.
-
-Q: Is Big Ambitions on Android?
-A: No. There is no official Android version of Big Ambitions as of November 2026.
-
-Q: Will Big Ambitions come to mobile?
-A: Its developer, Hovgaard Games, has not announced a mobile version. The studio's announced plans are more updates and a first DLC for the PC game.
-
-Q: What is a game like Big Ambitions for iPhone?
-A: City Ambitions is a business simulator for iPhone set in New York: you open a shop, set prices, hire staff, import stock and grow into a company. It is a different game by an independent developer, built for short sessions on a phone.
-
-Q: Is City Ambitions free?
-A: The download costs nothing and your first shop has no time limit. The Full Game is one in-app purchase. There are no ads.
 
 
 # How it plays
@@ -86,7 +77,7 @@ https://cityambitions.com/guides/getting-started/
 The opening is short, but three decisions in it follow you for the whole game. Here is what they are and how to make them.
 ## The goal
 
-Your mother's shop owes $100,000, and you have 180 days to pay it back. You start with $2,000. The company does not end on Day 180: clear the debt and keep building.
+Your mother's shop owes $100,000, and you have 180 days to pay it back. You start with $2,000. The company does not end on Day 180: clear the debt and keep building. See how to clear the debt in 180 days.
 
 ## Day 1: umbrellas in the rain
 
@@ -149,6 +140,219 @@ A coach walks you through the shop one lesson at a time: setting a price, orderi
 ## After the first shop
 
 You can run your first shop for as long as you like. The Full Game, a single purchase, opens the rest of the city: more storefronts, storage, containers, your own factory, buildings, deposits and shares.
+
+
+# Guide: Factory tycoon game on iPhone: make it yourself or buy it wholesale
+https://cityambitions.com/guides/factory-tycoon-game-iphone/
+
+Most factory games are about conveyor belts. In City Ambitions the factory is a business decision: is it cheaper to make this product yourself, or to keep buying it wholesale?
+## How the factory works
+
+From version 1.2, City Ambitions' factory runs on recipes. Each recipe turns raw materials into a product on a machine, with workers on the floor. You buy the raw materials from a wholesaler or import them by container, the machines produce every morning, and the goods go straight to your stores' storage.
+
+A silk scarf line: 240 a morning, make for $3.49 or buy for $8.
+
+## The make-or-buy decision
+
+The factory screen shows, for every product, what it costs to make and what it costs to buy. That gap is the whole game:
+
+  - Make it when the gap is large and your stores sell enough to keep the line busy.
+
+  - Buy it when demand is small or uneven: an idle line still costs rent and wages.
+
+  - Sell the surplus wholesale when the factory makes more than your stores can sell.
+
+## Getting started
+
+  - Grow one or two stores until you know what sells every day.
+
+  - Start with a small floor and one recipe for your best-selling product.
+
+  - Keep raw materials stocked: an empty input stops the line.
+
+  - Add machines and workers only when the line is full every morning.
+
+  - Compare the factory's cost per unit with your old wholesale price in the Daily Close.
+
+## The rest of the company
+
+The factory is one part of a bigger business sim: shops, supermarkets and fast food in New York neighborhoods, branches with delivery routes and three kinds of vehicle, container imports, delivery contracts, bank loans and, when you are rich, a luxury life. See how to run a store in a business sim for the basics, and the best business sim games on iPhone for other options.
+
+
+# Guide: How to clear $100,000 of debt in 180 days in City Ambitions
+https://cityambitions.com/guides/clear-100000-debt-in-180-days/
+
+Your mother's shop owes $100,000 and the bank wants it in 180 days. The good news: the game does not ask for $100,000 in cash. Here is what it measures, and a plan to get there.
+## What the game checks on Day 180
+
+When Day 180 closes, City Ambitions compares your company value with the $100,000 debt. Company value is everything the company owns, minus what it still owes:
+
+  - Counts: cash, stock on shelves and in storage (at cost), branches (part of what you spent setting them up), buildings you own, deposits, shares.
+
+  - Comes off: container orders not yet paid for, and what you still owe the bank on a loan.
+
+  - Does not count: money spent on the luxury life. It is spending, and the cash is gone.
+
+There are three endings, and none of them is game over:
+
+  Company value on Day 180 | What happens | 
+
+  
+    $100,000 or more | The debt is paid. The shop is your mother's again. | 
+
+    $60,000 to $99,999 | Short, but close: the bank takes the rest in instalments and the doors stay open. | 
+
+    Below $60,000 | The shop goes back to the bank. Everything else you built is still yours, and you keep playing. | 
+
+  
+
+The Home screen shows your progress against the debt every day, so you always know where you stand.
+
+## Days 1 to 7: learn one shop properly
+
+You start with $2,000 and one storefront. The first week is not about money; it is about learning what your shop's numbers mean.
+
+  - Sell out your umbrellas on Day 1 at a price above market: the rain makes people pay. See getting started.
+
+  - Never let the shelf run empty. Shoppers who find nothing leave, and regulars stop coming.
+
+  - Read the Daily Close every night. Revenue minus cost of goods, wages, rent and tax is your real profit.
+
+## Days 8 to 40: make the first shop boring
+
+A shop that runs itself is the base you build on. Aim for a full shelf, a price near the top of what shoppers accept, and staff on the busy blocks.
+
+  - Price up until profit stops rising. Change one price at a time and compare the next close. See how pricing works.
+
+  - Open the hours that pay. A block with few shoppers can cost more in wages than it earns. See staff and opening hours.
+
+  - Earn regulars. They come back every day without being won over again. See regulars and Store Pulse.
+
+## Days 40 to 120: grow the value, not only the cash
+
+This is where most of the $100,000 comes from. Profit that sits in the bank counts, but so does profit you turn into things the company owns.
+
+  - Open a second store in another neighborhood once the first one is full every day. Each branch adds its own daily profit.
+
+  - Cut your unit cost. Storage and container imports lower what each product costs you; the saving is profit on every sale. See stock, storage and containers.
+
+  - Try a supermarket or fast food (version 1.2) when you can staff it. More shoppers, smaller margins.
+
+  - Consider a factory for a product you sell in volume. See the factory guide.
+
+## Days 120 to 180: protect what you have
+
+  - Watch the progress bar, not the cash. A big container order lowers company value until it is paid and landed; time large orders so they arrive and sell before Day 180.
+
+  - Hold off on the luxury life until the debt is covered. A watch or a yacht is a reward, not an investment.
+
+  - Use a bank loan for growth only. The loan's cash counts and what you owe comes off, so a loan only helps if the business you build with it earns more than the interest.
+
+## Mistakes that leave you short
+
+  - Expanding before the first shop is profitable: two weak stores lose money twice as fast.
+
+  - Pricing far below market to look busy when staff cannot serve the crowd.
+
+  - Over-ordering perishable goods in a supermarket: spoiled stock is money thrown away.
+
+  - Spending on luxury before Day 180.
+
+Questions
+
+### Do I need $100,000 in cash on Day 180?
+
+No. City Ambitions measures company value: cash plus stock, branches, buildings, deposits and shares, minus unpaid orders and loans. Luxury purchases do not count.
+
+### What happens if I do not clear the debt?
+
+Above 60% of the debt, the bank takes the rest in instalments and the shop stays open. Below that, the shop goes back to the bank, but the rest of your company is still yours and the game goes on.
+
+### Does the game end on Day 180?
+
+No. The deadline settles the debt once, and then you keep playing with no time limit.
+
+### Can I try the start before downloading?
+
+Yes: the first day plays in your browser.
+
+
+# Guide: Business sim economy guide: pricing, stock and staff, explained with real numbers
+https://cityambitions.com/guides/business-sim-economy-guide/
+
+Every business sim runs on the same few equations: how many shoppers come, how many you can serve, what each sale earns, and what the day costs. Understand those and any shop makes sense.
+## The one equation: daily profit
+
+Daily profit = units sold × (price − unit cost) − wages − rent − tax. Every decision in a business sim moves one of those terms:
+
+  Lever | What it moves | The catch | 
+
+  
+    Price | Margin per sale | Fewer shoppers accept a higher price | 
+
+    Stock | How many units can sell | Cash tied up, storage, spoilage | 
+
+    Staff | How many shoppers you can serve | Wages every block you open | 
+
+    Supplier | Unit cost | Minimum orders and delivery time | 
+
+    Location | How many shoppers walk past | Rent | 
+
+  
+
+In City Ambitions the Daily Close at midnight shows each term, so you can see which lever moved.
+
+The Daily Close: every term of the profit equation, every night.
+
+## Demand: who comes, and who buys
+
+Shoppers come from the neighborhood's foot traffic and from your regulars. Each one compares your price with the product's market price. In City Ambitions the share who still buy falls as your price rises above market; the full curve is in how pricing works.
+
+So the best price is rarely the market price. It is the price where units × margin is highest, and that depends on whether you can serve everyone anyway.
+
+## Capacity: the cap nobody sees
+
+Sales are the smallest of three numbers: shoppers who want to buy, units on the shelf, and shoppers your staff can serve. Raising any of the others does nothing while the smallest one holds.
+
+  - Shelf is the limit: order more, or more often.
+
+  - Staff is the limit: hire for the busy block, or raise the price so the shoppers you serve pay more.
+
+  - Demand is the limit: lower the price a little, open better hours, or earn regulars.
+
+Staff decide how many shoppers a block can serve.
+
+## Unit cost: the lever that scales
+
+A lower unit cost raises profit on every sale in every store. In City Ambitions the path is local wholesale, then storage and bulk orders, then container imports (pay up front, by letter of credit or on landing), then a factory that makes the product from raw materials. Each step cuts the cost but ties up more cash for longer. See stock, storage and containers.
+
+Margin is price minus unit cost; containers and factories move the cost side.
+
+## Fixed costs: rent and wages
+
+Rent is paid whether you sell or not, and a staffed block costs wages even when it is quiet. That is why a second store only pays once the first one is profitable, and why closing a dead block can raise profit without a single extra sale.
+
+## Cash versus value
+
+Profit is not the same as cash. Stock you bought is still worth its cost; a container in transit is cash already spent. City Ambitions' goal is measured in company value, not cash, which changes how you plan the last weeks. See how to clear $100,000 of debt in 180 days.
+
+Questions
+
+### Should I price at the market price?
+
+Start there, then raise it step by step. If your staff cannot serve everyone, a higher price earns more from the same shoppers.
+
+### Why is my shop busy but not profitable?
+
+Usually staff or shelf is the limit, or wages for quiet blocks eat the margin. Check which number is smallest: demand, stock or service.
+
+### When should I open a second store?
+
+When the first one is full every day and profitable after rent and wages. A second weak store doubles the losses.
+
+### Where can I practise this?
+
+The daily pricing puzzle and the browser demo both run on City Ambitions' real numbers.
 
 
 # Guide: How pricing works
@@ -406,15 +610,11 @@ A closed block does more than lose that block's sales: shoppers who could not ge
 Later in the game you can hire a manager. Only businesses covered by Executive Autopilot keep running while you are away from the game.
 
 
-# Guide: The best business sim games on iPhone, and games like Big Ambitions on mobile (2026)
+# Guide: The best business sim games on iPhone (2026)
 https://cityambitions.com/guides/business-sim-games-iphone/
 
-Looking for a real business simulator on your phone, or something like Big Ambitions for iPhone? Here is what is out there in 2026, what each game is actually about, and how to choose.
+Looking for a real business simulator on your phone? Here is what is out there in 2026, what each game is actually about, and how to choose.
 Full disclosure: we make City Ambitions, the first game on this list. Every other game here is made by someone else and is listed because it is worth knowing about.
-
-## First: is Big Ambitions on mobile?
-
-No. Big Ambitions is a PC game by Hovgaard Games, sold on Steam, and as of November 2026 it has no official iPhone or Android version. If you want that kind of game on a phone, you need a different game. The details are on our Big Ambitions mobile page.
 
 ## What makes a good business sim (and not just an idle clicker)
 
@@ -432,13 +632,13 @@ Many games in the App Store's tycoon section are idle games: numbers go up while
 
 ## The list
 
-### 1. City Ambitions: the closest thing to Big Ambitions on iPhone
+### 1. City Ambitions: a deep shop-and-company sim for iPhone
 
 A single-player business simulator set in New York. You inherit your mother's shop and $100,000 of family debt, and you have 180 days to clear it. You set every price, order every box, staff four six-hour shifts and read a full profit and loss every night. Later you open branches in other neighborhoods, rent storage, run delivery routes, import containers, build a factory and face rival stores on your block.
 
-  - Best for: players who want real numbers and real decisions, Big Ambitions fans on a phone.
+  - Best for: players who want real numbers and real decisions on a phone.
 
-  - Model: free download, the first shop has no time limit, one purchase unlocks the rest. No ads, no energy timers.
+  - Model: free to start; one purchase unlocks the full game. No energy timers.
 
   - Platforms: iPhone (also Apple silicon Mac and Apple Vision Pro). Not on Android yet.
 
@@ -487,7 +687,7 @@ A newer iPhone game (2026) about founding and running a startup. If your interes
   If you want... | Try | 
 
   
-    Big Ambitions on your phone: a shop in New York, prices, staff, expansion | City Ambitions | 
+    A shop in New York with prices, staff and expansion | City Ambitions | 
 
     A real player-driven market | Sim Companies | 
 
@@ -499,16 +699,179 @@ A newer iPhone game (2026) about founding and running a startup. If your interes
 
   
 
-## Questions
+Questions
 
 ### What is the most realistic business simulator on iPhone?
 
 It depends on what you mean by realistic. For running a store, with prices, demand, wages, rent, tax and stock, City Ambitions models each of those directly. For a market made of real players, Sim Companies is the deepest.
 
-### Are there business sim games without ads?
+### Are there business sim games without heavy ads?
 
-Yes. City Ambitions has no ads at all, and several of the games above sell a one-time purchase instead of showing ads. Check each game's App Store page for its current model.
+Yes. Look for games sold as a one-time purchase, and check the App Store page before you download: idle games that ask you to watch an ad to double earnings are a different kind of game. City Ambitions is free to start and one purchase unlocks the full game. See offline business tycoon games for what to look for.
 
-### Is there a game like Big Ambitions for Android?
+### Is there a business sim like this for Android?
 
-Big Ambitions itself is not on Android. Sim Companies and Game Dev Tycoon are on Android; City Ambitions is iPhone-only for now, but its first day runs in any phone's browser.
+Sim Companies and Game Dev Tycoon are on Android; City Ambitions is iPhone-only for now, but its first day runs in any phone's browser.
+
+## Guides by topic
+
+  - Supermarket simulator on iPhone: running a grocery store where food spoils.
+
+  - Factory tycoon game on iPhone: make it yourself or buy it wholesale.
+
+  - Offline business tycoon games: and how to spot the ad-heavy ones.
+
+  - How to run a store in a business sim: pricing, stock and staff tips.
+
+  - Business sim economy guide: pricing, stock and staff, explained with real numbers.
+
+  - How to clear $100,000 of debt in 180 days: a plan for City Ambitions' main goal.
+
+
+# Guide: Supermarket simulator on iPhone: run a grocery store that can spoil
+https://cityambitions.com/guides/supermarket-simulator-iphone/
+
+A good supermarket sim is not about scanning barcodes. It is about the decisions a grocer makes: what to stock, how much, at what price, and what to do before the milk goes off.
+## What makes a supermarket different from a shop
+
+A clothing store sells a few things at a fat margin. A supermarket sells many cheap things to many people. That changes how you play:
+
+  - Volume over margin. Each item earns little, so footfall and basket size matter more than any single price.
+
+  - Food spoils. Milk, bread and fruit only last a few days. Order too much and you throw money away at closing.
+
+  - Cold storage is a limit. Fresh goods need fridge space, so the fridges cap how much you can keep.
+
+  - The checkout is the bottleneck. Big baskets take longer to ring up, so staff and registers decide how many shoppers you can serve.
+
+A supermarket in Murray Hill, version 1.2.
+
+## The supermarket in City Ambitions
+
+From version 1.2 you can open a supermarket as one of your businesses in New York. It sells everyday groceries, from milk and eggs to bread, fruit, pasta, cereal and frozen pizza. Every product has its own price, and the Daily Close shows what sold, what it cost and, new for groceries, what spoiled.
+
+A supermarket pulls far more shoppers than a boutique (the one in the screenshot serves 345 a day), but each sale is small. The skill is keeping the shelves full of what moves without over-ordering what rots.
+
+## Tips for running a grocery store well
+
+  - Order fresh goods little and often. A short shelf life punishes big orders. Let longer-lasting lines carry the big orders instead.
+
+  - Price staples close to market. In a high-volume store a small discount on a basic can bring a lot of extra baskets; check the next Daily Close before you go further.
+
+  - Watch the spoiled line. If the same product spoils every few days, order less of it or price it to move.
+
+  - Staff for the crowd. If shoppers give up in the queue, hire for another block before you cut prices. See staff and opening hours.
+
+  - Use delivery contracts. A supplier can top up your shelves every morning so you never forget an order.
+
+## Is it a real simulator or an idle game?
+
+City Ambitions has no timers to wait on and no automatic money. Demand comes from your prices, stock, staff, opening hours and the regulars you earn, so a badly run supermarket loses money. If you want the full picture of how demand works, read how pricing works and regulars and Store Pulse.
+
+## Other business sims on iPhone
+
+If you want a wider view, our list of the best business sim games on iPhone compares several, and how to run a store in a business sim covers the basics that apply to every shop.
+
+
+# Guide: Offline business tycoon games for iPhone, and how to spot the ad-heavy ones
+https://cityambitions.com/guides/offline-business-tycoon-games-iphone/
+
+Plenty of tycoon games need a connection to show you ads, sync timers or check a server. Here is how to find business games that play anywhere, and how to read an App Store page before you download.
+## What "offline" really means for a mobile game
+
+A game plays offline when everything you do is calculated and saved on your phone. Signs that it does:
+
+  - No account or sign-in to start playing.
+
+  - Saves on the device, not "in the cloud only".
+
+  - No server-driven events that need you online at a certain hour.
+
+Buying, restoring a purchase or downloading an update always needs a connection, on any game.
+
+## How to spot an ad-heavy tycoon game before you install it
+
+Many games in the App Store's tycoon section are idle games: numbers go up on their own, and the main way to go faster is to watch an ad. They can be fun, but they are a different kind of game. Clues on the App Store page:
+
+  - Screenshots showing "x2" or "watch to boost" buttons.
+
+  - Energy, stamina or "come back in 4 hours" timers.
+
+  - A long list of small in-app purchases (gem packs, coin bundles) instead of a single unlock.
+
+  - Reviews mentioning ads after every action.
+
+A business simulator, by contrast, makes you decide prices, stock and staff, and a bad decision costs you money.
+
+The Daily Close: the books close at midnight, on your phone.
+
+## City Ambitions
+
+City Ambitions is a single-player business simulator set in New York. Your company is saved on your iPhone, there is no account, and the simulation runs on the device, so you can play without a connection once it is installed. There are no energy timers and no automatic money: you set prices, order stock, staff shifts and read a full profit and loss every night, then expand into supermarkets, fast food, branches, containers and your own factory.
+
+Price: free to start; one in-app purchase unlocks the full game. Check the App Store page for the current details.
+
+## More to read
+
+  - The best business sim games on iPhone (2026)
+
+  - How to run a store in a business sim
+
+  - Play City Ambitions' first day in your browser
+
+
+# Guide: How to run a store in a business sim: pricing, stock and staff tips
+https://cityambitions.com/guides/how-to-run-a-store-business-sim/
+
+Every shop in a business sim comes down to three questions: what to charge, how much to keep on the shelf, and how many people you need at the till. Get those right and the rest is growth.
+## 1. Pricing: start at market, then listen
+
+Most business sims give each product a market price: what shoppers expect to pay. Start there. Raise the price a little and watch two things: how many shoppers walk away, and whether profit per day goes up.
+
+  - Pricing below market rarely pays unless you are clearing stock or your store has spare capacity.
+
+  - Pricing above market works when you cannot serve everyone anyway: the shoppers you lose were going to leave the queue.
+
+  - Change one price at a time and compare the next day's results.
+
+Every product has its own price slider and market price.
+In City Ambitions the numbers behind this are public: see how pricing works for the exact price curve.
+
+## 2. Stock: never run the shelf empty
+
+An empty shelf loses today's sale and, in most sims, tomorrow's customer. A full warehouse ties up cash. Aim in between:
+
+  - Keep at least one day of sales on the shelf, plus a margin for busy days.
+
+  - Order before you run out, not after: deliveries take time.
+
+  - Buy in bulk only when the unit cost drops enough to pay for the storage.
+
+  - For perishable goods, order little and often.
+
+More detail: stock, storage and containers.
+
+## 3. Staff: the hidden cap on sales
+
+Customers who cannot be served leave. If your shop is busy but profit is flat, the till is probably the limit.
+
+  - Staff the busiest hours first; nights and early mornings usually come last.
+
+  - Watch morale and raise requests before people quit.
+
+  - When the queue is the limit, a higher price can earn more than another hire.
+
+Four six-hour blocks a day; each hire covers one.
+More detail: staff and opening hours.
+
+## 4. Read the books every day
+
+The daily report is the best teacher in any business sim. Revenue, cost of goods, wages, rent and tax tell you which decision worked. In City Ambitions this is the Daily Close at midnight.
+
+## 5. Grow when one store is boring
+
+When a store runs itself, open the next one: a new neighborhood, a new kind of business (a supermarket or fast food from version 1.2), a container import to lower costs, or a factory to make your own goods.
+
+## Try it
+
+You can practise pricing and stock in City Ambitions' first day in your browser, or try the daily pricing puzzle. For the numbers behind it, read the business sim economy guide. For other games, see the best business sim games on iPhone.

@@ -28,7 +28,7 @@
   --green: #1d4631;
   --green-ink: #f4f1ea;
   --green-soft: #e3ebe5;
-  --brass: #a9701a;
+  --brass: #8a5a12;
   --action: #5b3a12;
   --action-ink: #fbf7ef;
   --profit: #128053;
@@ -296,7 +296,7 @@ a.card:hover { border-color: var(--brass); transform: translateY(-2px); }
   .nav-langs a { padding: 8px 0; font-size: .92rem; }
 }
 
-/* Consent banner (D-124) */
+/* Consent banner (D-162) */
 .consent { position: fixed; left: 12px; right: 12px; bottom: 12px; z-index: 20; display: flex; justify-content: center; }
 .consent[hidden] { display: none; }
 .consent-inner { max-width: 760px; width: 100%; background: var(--surface); color: var(--ink); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: 0 10px 40px rgba(0, 0, 0, .18); padding: 16px 18px; display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
@@ -305,7 +305,7 @@ a.card:hover { border-color: var(--brass); transform: translateY(-2px); }
 .consent-actions { display: flex; gap: 10px; flex: 0 0 auto; }
 .consent-actions .btn { min-height: 44px; padding: 10px 18px; font-size: .95rem; }
 
-/* Daily puzzle (D-127) */
+/* Daily puzzle (D-165) */
 .daily-body { height: auto; min-height: 640px; overflow: visible; }
 .daily-head { display: flex; gap: 14px; align-items: center; }
 .daily-head img { border-radius: 14px; background: var(--raised); }
@@ -332,3 +332,14 @@ a.card:hover { border-color: var(--brass); transform: translateY(-2px); }
 .lb-form { flex-direction: column; align-items: stretch; }
 .lb-form .input { width: 100%; font-size: 1rem; min-height: 48px; }
 .lb-form .btn { width: 100%; }
+
+/* 1.2 section (D-169) */
+.v12-grid { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+.green .card { background: rgba(255,255,255,.06); border-color: rgba(255,255,255,.14); }
+.green .card h3 { color: var(--green-ink); }
+.green .card p { color: color-mix(in srgb, var(--green-ink) 78%, transparent); }
+.store-badge { display: inline-block; line-height: 0; }
+.store-badge img { height: 48px; width: auto; }
+.prose figure.shot { max-width: 260px; margin: 1.6em auto; text-align: center; }
+.prose figure.shot img { border-radius: 18px; box-shadow: var(--shadow); width: 100%; height: auto; }
+.prose figure.shot figcaption { font-size: .85rem; color: var(--muted); margin-top: 8px; }

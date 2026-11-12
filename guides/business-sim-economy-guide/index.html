@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>if(location.protocol==="http:"&&/(^|\.)cityambitions\.com$/.test(location.hostname))location.replace("https://"+location.host+location.pathname+location.search+location.hash)</script>
+<title>Business sim economy guide: pricing, stock and staff, explained with real numbers · City Ambitions</title>
+<meta name="description" content="How the economy of a business simulator works, using City Ambitions as the worked example: where profit comes from, how price, stock and staff interact, and the numbers to watch.">
+
+<link rel="canonical" href="https://cityambitions.com/guides/business-sim-economy-guide/">
+<link rel="alternate" hreflang="en" href="https://cityambitions.com/guides/business-sim-economy-guide/">
+<link rel="alternate" hreflang="x-default" href="https://cityambitions.com/guides/business-sim-economy-guide/">
+<meta name="apple-itunes-app" content="app-id=6812037838">
+<meta name="theme-color" content="#1d4631">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="City Ambitions">
+<meta property="og:title" content="Business sim economy guide: pricing, stock and staff, explained with real numbers · City Ambitions">
+<meta property="og:description" content="How the economy of a business simulator works, using City Ambitions as the worked example: where profit comes from, how price, stock and staff interact, and the numbers to watch.">
+<meta property="og:url" content="https://cityambitions.com/guides/business-sim-economy-guide/">
+<meta property="og:image" content="https://cityambitions.com/img/og-en.jpg">
+<meta property="og:locale" content="en_US">
+
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/icon-32.png">
+<link rel="apple-touch-icon" href="/img/icon-180.png">
+<link rel="preload" href="/fonts/fraunces-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/css/site.css">
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Business sim economy guide: pricing, stock and staff, explained with real numbers", "description": "How the economy of a business simulator works, using City Ambitions as the worked example: where profit comes from, how price, stock and staff interact, and the numbers to watch.", "inLanguage": "en", "url": "https://cityambitions.com/guides/business-sim-economy-guide/", "dateModified": "2026-11-12", "image": "https://cityambitions.com/img/og.jpg", "author": {"@type": "Person", "name": "Tarik Metin Kaya"}, "about": {"@type": "VideoGame", "name": "City Ambitions"}}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Guides", "item": "https://cityambitions.com/guides/"}, {"@type": "ListItem", "position": 2, "name": "Business sim economy guide: pricing, stock and staff, explained with real numbers", "item": "https://cityambitions.com/guides/business-sim-economy-guide/"}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Should I price at the market price?", "acceptedAnswer": {"@type": "Answer", "text": "Start there, then raise it step by step. If your staff cannot serve everyone, a higher price earns more from the same shoppers."}}, {"@type": "Question", "name": "Why is my shop busy but not profitable?", "acceptedAnswer": {"@type": "Answer", "text": "Usually staff or shelf is the limit, or wages for quiet blocks eat the margin. Check which number is smallest: demand, stock or service."}}, {"@type": "Question", "name": "When should I open a second store?", "acceptedAnswer": {"@type": "Answer", "text": "When the first one is full every day and profitable after rent and wages. A second weak store doubles the losses."}}, {"@type": "Question", "name": "Where can I practise this?", "acceptedAnswer": {"@type": "Answer", "text": "The daily pricing puzzle and the browser demo both run on City Ambitions' real numbers."}}]}</script>
+</head>
+<body data-ga="G-BKH13N7YVM" data-page="guide" data-consent='{&quot;text&quot;: &quot;We would like to count visits and clicks with Google Analytics to see what people use on this site. It sets cookies.&quot;, &quot;accept&quot;: &quot;Allow&quot;, &quot;decline&quot;: &quot;No thanks&quot;, &quot;more&quot;: &quot;Privacy&quot;, &quot;privacy&quot;: &quot;/privacy/&quot;}'>
+<a class="skip" href="#main">Skip to content</a>
+<div class="lang-hint" data-lang-hint data-hints='{}'></div>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/"><img src="/img/icon-192.png" alt="" width="32" height="32">City Ambitions</a>
+    <nav class="nav" id="nav" aria-label="Main"><a href="/daily/">Daily</a><a href="/play/">Play the first day</a><a href="/guides/" aria-current="page">Guides</a><a href="/press/">Press</a><div class="nav-langs"><a href="/guides/business-sim-economy-guide/" hreflang="en">English</a></div></nav>
+    
+    <button class="menu-toggle" type="button" aria-controls="nav" aria-expanded="false" data-menu>
+      <span class="skip">Menu</span><svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M3 6h14M3 10h14M3 14h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+</header>
+<main id="main">
+
+<section class="page-hero"><div class="wrap narrow">
+  <p class="crumbs"><a href="/guides/">All guides</a></p><h1>Business sim economy guide: pricing, stock and staff, explained with real numbers</h1><p class="lede">Every business sim runs on the same few equations: how many shoppers come, how many you can serve, what each sale earns, and what the day costs. Understand those and any shop makes sense.</p>
+  <p class="muted" style="font-size:.85rem">Updated 2026-11-12</p>
+</div></section>
+<section style="padding-bottom:80px"><div class="wrap narrow">
+  <article class="prose"><h2>The one equation: daily profit</h2>
+<p>Daily profit = units sold × (price − unit cost) − wages − rent − tax. Every decision in a business sim moves one of those terms:</p>
+<table>
+  <thead><tr><th>Lever</th><th>What it moves</th><th>The catch</th></tr></thead>
+  <tbody>
+    <tr><td>Price</td><td>Margin per sale</td><td>Fewer shoppers accept a higher price</td></tr>
+    <tr><td>Stock</td><td>How many units can sell</td><td>Cash tied up, storage, spoilage</td></tr>
+    <tr><td>Staff</td><td>How many shoppers you can serve</td><td>Wages every block you open</td></tr>
+    <tr><td>Supplier</td><td>Unit cost</td><td>Minimum orders and delivery time</td></tr>
+    <tr><td>Location</td><td>How many shoppers walk past</td><td>Rent</td></tr>
+  </tbody>
+</table>
+<p>In City Ambitions the Daily Close at midnight shows each term, so you can see which lever moved.</p>
+<figure class="shot"><img src="/img/v3/en/05_close.webp" width="560" height="1217" alt="City Ambitions Daily Close with revenue, costs and net profit" loading="lazy" decoding="async"><figcaption>The Daily Close: every term of the profit equation, every night.</figcaption></figure>
+
+<h2>Demand: who comes, and who buys</h2>
+<p>Shoppers come from the neighborhood's foot traffic and from your regulars. Each one compares your price with the product's market price. In City Ambitions the share who still buy falls as your price rises above market; the full curve is in <a href="/guides/pricing/">how pricing works</a>.</p>
+<p>So the best price is rarely the market price. It is the price where units × margin is highest, and that depends on whether you can serve everyone anyway.</p>
+
+<h2>Capacity: the cap nobody sees</h2>
+<p>Sales are the smallest of three numbers: shoppers who want to buy, units on the shelf, and shoppers your staff can serve. Raising any of the others does nothing while the smallest one holds.</p>
+<ul>
+  <li><strong>Shelf is the limit:</strong> order more, or more often.</li>
+  <li><strong>Staff is the limit:</strong> hire for the busy block, or raise the price so the shoppers you serve pay more.</li>
+  <li><strong>Demand is the limit:</strong> lower the price a little, open better hours, or earn regulars.</li>
+</ul>
+<figure class="shot"><img src="/img/v3/en/07_staff.webp" width="560" height="1217" alt="City Ambitions staff roster with six-hour blocks" loading="lazy" decoding="async"><figcaption>Staff decide how many shoppers a block can serve.</figcaption></figure>
+
+<h2>Unit cost: the lever that scales</h2>
+<p>A lower unit cost raises profit on every sale in every store. In City Ambitions the path is local wholesale, then storage and bulk orders, then container imports (pay up front, by letter of credit or on landing), then a factory that makes the product from raw materials. Each step cuts the cost but ties up more cash for longer. See <a href="/guides/stock-and-storage/">stock, storage and containers</a>.</p>
+<figure class="shot"><img src="/img/v3/en/06_margin.webp" width="560" height="1217" alt="City Ambitions margin view comparing unit cost and price" loading="lazy" decoding="async"><figcaption>Margin is price minus unit cost; containers and factories move the cost side.</figcaption></figure>
+
+<h2>Fixed costs: rent and wages</h2>
+<p>Rent is paid whether you sell or not, and a staffed block costs wages even when it is quiet. That is why a second store only pays once the first one is profitable, and why closing a dead block can raise profit without a single extra sale.</p>
+
+<h2>Cash versus value</h2>
+<p>Profit is not the same as cash. Stock you bought is still worth its cost; a container in transit is cash already spent. City Ambitions' goal is measured in company value, not cash, which changes how you plan the last weeks. See <a href="/guides/clear-100000-debt-in-180-days/">how to clear $100,000 of debt in 180 days</a>.</p>
+
+<h2 id="faq">Questions</h2>
+<h3>Should I price at the market price?</h3>
+<p>Start there, then raise it step by step. If your staff cannot serve everyone, a higher price earns more from the same shoppers.</p>
+<h3>Why is my shop busy but not profitable?</h3>
+<p>Usually staff or shelf is the limit, or wages for quiet blocks eat the margin. Check which number is smallest: demand, stock or service.</p>
+<h3>When should I open a second store?</h3>
+<p>When the first one is full every day and profitable after rent and wages. A second weak store doubles the losses.</p>
+<h3>Where can I practise this?</h3>
+<p>The <a href="/daily/">daily pricing puzzle</a> and the <a href="/play/">browser demo</a> both run on City Ambitions' real numbers.</p>
+</article>
+  <div class="guide-cta"><h3>Put it to work</h3><p class="muted">Open City Ambitions on iPhone, or practise the first day in your browser.</p>
+    <div class="btn-row"><a class="store-badge" href="https://apps.apple.com/app/apple-store/id6812037838?pt=128372482&ct=web-en-guide-business-sim-economy-guide&mt=8" rel="noopener" data-track="app_store_click" data-placement="guide-business-sim-economy-guide"><img class="badge" src="/badges/app-store-en.svg" alt="Download City Ambitions on the App Store" width="144" height="48"></a><a class="btn btn-secondary" href="/play/">Play the first day</a></div></div>
+</div></section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="cols">
+      <div style="max-width:320px">
+        <p><strong>City Ambitions</strong></p>
+        <p>A business simulation for iPhone. Run a shop in New York, set every price, clear the family debt.</p>
+        <a class="store-badge" href="https://apps.apple.com/app/apple-store/id6812037838?pt=128372482&ct=web-en-footer&mt=8" rel="noopener" data-track="app_store_click" data-placement="footer"><img class="badge" src="/badges/app-store-en.svg" alt="Download City Ambitions on the App Store" width="144" height="48"></a>
+      </div>
+      <div><p><strong>The game</strong></p><ul>
+        <li><a href="/play/">Play the first day</a></li>
+        <li><a href="/guides/">Guides</a></li>
+      </ul></div>
+      <div><p><strong>Help</strong></p><ul>
+        <li><a href="/support/">Support</a></li>
+        <li><a href="/press/">Press kit</a></li>
+        <li><a href="mailto:tmkdevcomp@gmail.com">Contact</a></li>
+      </ul></div>
+      <div><p><strong>Legal</strong></p><ul>
+        <li><a href="/privacy/">Privacy</a></li>
+        <li><a href="#" data-consent-open>Cookie settings</a></li>
+      </ul></div>
+    </div>
+    <p class="langs"><strong>Languages:</strong>&nbsp; <a href="/guides/business-sim-economy-guide/" hreflang="en">English</a></p>
+    <p class="fine">City Ambitions is an independent game by Tarik Metin Kaya (TMK Tech). Apple, iPhone and App Store are trademarks of Apple Inc., registered in the U.S. and other countries.</p>
+  </div>
+</footer>
+<script src="/js/site.js" defer></script>
+</body>
+</html>

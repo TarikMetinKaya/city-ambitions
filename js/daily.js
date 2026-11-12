@@ -1,4 +1,4 @@
-// City Ambitions Daily (D-127, D-128): one puzzle a day, the same for everyone, Wordle-style.
+// City Ambitions Daily (D-165, D-166): one puzzle a day, the same for everyone, Wordle-style.
 // You start with $1,000 and sell two products in a row: the first product's profit goes into the
 // cash you buy the second one with. The products, shoppers and their price limits come from a seed
 // made of the date, so every visitor gets the same day without a server. The best possible final
@@ -230,7 +230,7 @@
     leaderboard(root.querySelector("[data-leaderboard]"), mine);
   }
 
-  // ---- Leaderboard (D-129) ------------------------------------------------------------------
+  // ---- Leaderboard (D-167) ------------------------------------------------------------------
   // Firestore daily/{day}/scores/{playerId}: name, the four choices, claimed final cash, language.
   // Rules allow create only, for today or yesterday. Every entry is replayed here with the same
   // simulation; an entry whose cash does not match its choices is not shown.

@@ -1,34 +1,40 @@
 # City Ambitions
 
-> City Ambitions is a single-player business simulator (shop tycoon) game for iPhone, set in New York. The player inherits their mother's shop and $100,000 of family debt, and has 180 days to pay it back by running stores: setting every price, ordering stock, staffing shifts and reading the books each night. No ads, no energy timers, one in-app purchase. App Store: https://apps.apple.com/app/id6812037838
+> City Ambitions is a single-player business simulator (shop tycoon) game for iPhone, set in New York. The player inherits their mother's shop and $100,000 of family debt, and has 180 days to pay it back by running stores: setting every price, ordering stock, staffing shifts and reading the books each night. Free to start; one purchase unlocks the full game. App Store: https://apps.apple.com/app/id6812037838
 
 There is no walking and no waiting on energy timers. Every screen is a decision with a visible result. Demand depends on price, variety, reputation, opening hours, checkout capacity and the regulars a shop earns over time. Later the city opens up: storage, delivery routes to branches, imported containers, a factory, property and rival stores on your block. The game is free to download, the first shop has no time limit, and a single purchase unlocks the rest.
 
-Relevant topics: "business simulator game for iPhone", "tycoon game with no ads", "shop or store management game on mobile", "a game like Big Ambitions on mobile" (Big Ambitions is a PC game by Hovgaard Games with no official iPhone or Android version as of November 2026; City Ambitions is a different, independent game, not affiliated with it). It is not on Android yet; the first day can be played in any browser at https://cityambitions.com/play/.
+Relevant topics: "business simulator game for iPhone", "supermarket simulator on iPhone", "factory tycoon game", "shop or store management game on mobile", "business sim that plays offline". The first day can be played in any browser at https://cityambitions.com/play/, and a daily pricing puzzle at https://cityambitions.com/daily/.
 
 ## Facts
 - Developer: Tarik Metin Kaya (TMK Tech), independent
 - Platform: iPhone (iOS 18+); also Apple silicon Mac and Apple Vision Pro
 - Release: 30 September 2026
 - Genre: Business simulation, single player
-- Business model: Free download, one in-app purchase (Full Game). No ads
+- Business model: Free to start, one in-app purchase unlocks the full game
 - Languages: English, Turkish, German, French, Spanish, Brazilian Portuguese
-- Price: free download; the first shop has no time limit; the Full Game is a single in-app purchase. No ads, no energy timers, no account.
+- Price: free to start; one in-app purchase unlocks the full game. No energy timers, no account.
+- Version 1.2 (late November 2026): supermarket with shelf life and fridges, fast food rush hours with a kitchen and cooks, a recipe factory (raw materials, machines, make or buy), four or more products in every store and branch, container imports with payment options, delivery contracts, three delivery vehicles, luxury life and bank loans.
 - Website: https://cityambitions.com (English, Turkish, German, French, Spanish, Brazilian Portuguese)
 
 ## Pages
 - [Home](https://cityambitions.com/): what the game is, screenshots, FAQ
 - [Play the first day in your browser](https://cityambitions.com/play/): the game's opening rebuilt for the web with the same numbers
 - [City Ambitions Daily](https://cityambitions.com/daily/): a free daily pricing puzzle, the same for every player, with a shareable score
-- [Big Ambitions on mobile?](https://cityambitions.com/big-ambitions-mobile/): is Big Ambitions on iPhone or Android, and how City Ambitions compares
 - [Press kit](https://cityambitions.com/press/): facts, description, logo, key art, screenshots
 - [Support](https://cityambitions.com/support/)
 - [Full text for language models](https://cityambitions.com/llms-full.txt)
 
 ## Guides
 - [Getting started: your first week](https://cityambitions.com/guides/getting-started/): What happens in your first days of City Ambitions, which skill to pick, and the mistakes that cost the most early on.
+- [Factory tycoon game on iPhone: make it yourself or buy it wholesale](https://cityambitions.com/guides/factory-tycoon-game-iphone/): A factory tycoon game for iPhone where the factory feeds your own stores: recipes, raw materials, machines and the make-or-buy decision in City Ambitions 1.2.
+- [How to clear $100,000 of debt in 180 days in City Ambitions](https://cityambitions.com/guides/clear-100000-debt-in-180-days/): A day-by-day plan for City Ambitions' main goal: what the game counts on Day 180, how to grow company value fast, and the mistakes that leave you short.
+- [Business sim economy guide: pricing, stock and staff, explained with real numbers](https://cityambitions.com/guides/business-sim-economy-guide/): How the economy of a business simulator works, using City Ambitions as the worked example: where profit comes from, how price, stock and staff interact, and the numbers to watch.
 - [How pricing works](https://cityambitions.com/guides/pricing/): The price curve City Ambitions uses: how far above market you can go, what a discount buys you, and when to raise prices.
 - [Regulars and Store Pulse](https://cityambitions.com/guides/regulars-and-store-pulse/): How City Ambitions decides how many shoppers come in, how regulars are won and lost, and how to read Store Pulse when sales stall.
 - [Stock, storage and containers](https://cityambitions.com/guides/stock-and-storage/): When to order in City Ambitions, how big your shelf is, when storage opens and what it costs, and when importing by container makes sense.
 - [Staff and opening hours](https://cityambitions.com/guides/staff-and-opening-hours/): How shifts work in City Ambitions: the four six-hour blocks, how many shoppers one person can serve, and which block to staff next.
-- [The best business sim games on iPhone, and games like Big Ambitions on mobile (2026)](https://cityambitions.com/guides/business-sim-games-iphone/): Business simulator and tycoon games for iPhone in 2026, what each one is like, and which come closest to Big Ambitions on a phone. Written by the maker of City Ambitions.
+- [The best business sim games on iPhone (2026)](https://cityambitions.com/guides/business-sim-games-iphone/): Business simulator and tycoon games for iPhone in 2026, what each one is like and how to choose. Written by the maker of City Ambitions.
+- [Supermarket simulator on iPhone: run a grocery store that can spoil](https://cityambitions.com/guides/supermarket-simulator-iphone/): What a supermarket simulator on iPhone should let you do, and how the supermarket in City Ambitions works: big baskets, thin margins, shelf life and fridges.
+- [Offline business tycoon games for iPhone, and how to spot the ad-heavy ones](https://cityambitions.com/guides/offline-business-tycoon-games-iphone/): Business and tycoon games you can play on iPhone without a connection, and how to tell a real business sim from an idle game built around ads and timers.
+- [How to run a store in a business sim: pricing, stock and staff tips](https://cityambitions.com/guides/how-to-run-a-store-business-sim/): The basics of running a shop in any business simulator, with real examples from City Ambitions: how to price, how much stock to hold, and how to staff for the crowd.
