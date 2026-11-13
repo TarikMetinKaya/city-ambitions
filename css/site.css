@@ -291,7 +291,9 @@ a.card:hover { border-color: var(--brass); transform: translateY(-2px); }
 .site-footer .langs { margin-top: 28px; }
 .nav-langs { display: none; }
 @media (max-width: 820px) {
-  .site-header .lang { display: none; }
+  .site-header .lang select { font-size: .85rem; max-width: 118px; padding: 8px 24px 8px 8px; min-height: 40px; text-overflow: ellipsis; }
+  .site-header .lang::after { right: 9px; }
+  .site-header .wrap { gap: 8px; }
   .nav-langs { display: flex; flex-wrap: wrap; gap: 4px 14px; border-top: 1px solid var(--line); margin-top: 8px; padding-top: 8px; }
   .nav-langs a { padding: 8px 0; font-size: .92rem; }
 }
@@ -343,3 +345,5 @@ a.card:hover { border-color: var(--brass); transform: translateY(-2px); }
 .prose figure.shot { max-width: 260px; margin: 1.6em auto; text-align: center; }
 .prose figure.shot img { border-radius: 18px; box-shadow: var(--shadow); width: 100%; height: auto; }
 .prose figure.shot figcaption { font-size: .85rem; color: var(--muted); margin-top: 8px; }
+/* Phones narrower than 360px: icon only, so the language picker fits (D-169). */
+@media (max-width: 359px) { .site-header .brand-name { display: none; } }
