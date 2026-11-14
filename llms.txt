@@ -12,10 +12,11 @@ Relevant topics: "business simulator game for iPhone", "supermarket simulator on
 - Release: 30 September 2026
 - Genre: Business simulation, single player
 - Business model: Free to start, one in-app purchase unlocks the full game
-- Languages: English, Turkish, German, French, Spanish, Brazilian Portuguese
-- Price: free to start; one in-app purchase unlocks the full game. No energy timers, no account.
+- Languages: English, Turkish, German, French, Spanish, Brazilian Portuguese, Japanese, Korean, Italian, Dutch
+- Price: free to start; one in-app purchase unlocks the full game. From version 1.2, players without the Full Game may see an occasional interstitial ad between days (Unity Ads; none in the first week); the Full Game or the Supporter Pack removes them. No energy timers, no account.
+- Languages in the game: English, Turkish, German, French, Spanish, Brazilian Portuguese, Japanese, Korean, Italian, Dutch.
 - Version 1.2 (late November 2026): supermarket with shelf life and fridges, fast food rush hours with a kitchen and cooks, a recipe factory (raw materials, machines, make or buy), four or more products in every store and branch, container imports with payment options, delivery contracts, three delivery vehicles, luxury life and bank loans.
-- Website: https://cityambitions.com (English, Turkish, German, French, Spanish, Brazilian Portuguese)
+- Website: https://cityambitions.com (English, Turkish, German, French, Spanish, Brazilian Portuguese, Japanese, Korean, Italian, Dutch)
 
 ## Pages
 - [Home](https://cityambitions.com/): what the game is, screenshots, FAQ

@@ -62,7 +62,7 @@
   }
 })();
 
-// Analytics (D-162). Only present when the build sets GA_MEASUREMENT_ID (body[data-ga]).
+// Analytics (SITE-2). Only present when the build sets GA_MEASUREMENT_ID (body[data-ga]).
 // Visitors in a European time zone (EU, UK, Switzerland, Turkey...) are asked first and Google's
 // script is not even loaded until they accept; elsewhere it loads straight away. The choice lives
 // in localStorage and can be changed from the footer. window.caTrack(name, params) is always
