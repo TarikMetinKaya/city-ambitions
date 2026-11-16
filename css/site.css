@@ -347,3 +347,10 @@ a.card:hover { border-color: var(--brass); transform: translateY(-2px); }
 .prose figure.shot figcaption { font-size: .85rem; color: var(--muted); margin-top: 8px; }
 /* Phones narrower than 360px: icon only, so the language picker fits (SITE-9). */
 @media (max-width: 359px) { .site-header .brand-name { display: none; } }
+/* Guide link lists: home, and "more guides" under every guide (SITE-11). */
+.guide-links { list-style: none; padding: 0; margin: 16px 0 0; display: grid; gap: 2px; }
+.guide-links li { border-bottom: 1px solid var(--line); }
+.guide-links a { display: block; padding: 12px 0; text-decoration: none; color: var(--ink); font-weight: 550; }
+.guide-links a:hover { color: var(--brass); }
+.related { margin-top: 48px; }
+.related h2 { font-size: 1.3rem; margin: 0; }
