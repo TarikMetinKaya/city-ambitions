@@ -164,3 +164,20 @@
     });
   });
 })();
+
+// Gameplay video (SITE-13): nothing is requested from YouTube until the visitor presses play.
+(function () {
+  document.querySelectorAll("[data-video]").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var box = document.createElement("div");
+      box.className = "video";
+      var f = document.createElement("iframe");
+      f.src = "https://www.youtube-nocookie.com/embed/" + encodeURIComponent(btn.getAttribute("data-video")) + "?autoplay=1&playsinline=1&rel=0";
+      f.title = btn.getAttribute("aria-label") || "Video";
+      f.allow = "autoplay; encrypted-media; picture-in-picture; fullscreen";
+      f.allowFullscreen = true;
+      box.appendChild(f);
+      btn.parentNode.replaceChild(box, btn);
+    });
+  });
+})();
