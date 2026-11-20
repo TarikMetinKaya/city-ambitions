@@ -25,6 +25,7 @@ Relevant topics: "business simulator game for iPhone", "supermarket simulator on
 - [Home](https://cityambitions.com/): what the game is, screenshots, FAQ
 - [Play the first day in your browser](https://cityambitions.com/play/): the game's opening rebuilt for the web with the same numbers
 - [City Ambitions Daily](https://cityambitions.com/daily/): a free daily pricing puzzle, the same for every player, with a shareable score
+- [Wiki: every number in the game](https://cityambitions.com/wiki/): products with cost and market price, store types, wholesalers, rent, wages, storage, containers, vehicles, loans, tax, factory
 - [What's new and what's next](https://cityambitions.com/updates/): the latest version and the roadmap
 - [Press kit](https://cityambitions.com/press/): facts, description, logo, key art, screenshots
 - [Support](https://cityambitions.com/support/)
