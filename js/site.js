@@ -87,10 +87,27 @@
     window.gtag = function () { window.dataLayer.push(arguments); };
     window.gtag("js", new Date());
     window.gtag("config", id, { site_lang: lang, page_type: body.getAttribute("data-page") || "" });
-    var s = document.createElement("script");
-    s.async = true;
-    s.src = "https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(id);
-    document.head.appendChild(s);
+    // Google's script is fetched after the page has loaded and the browser is idle, or on the first
+    // tap or scroll, whichever comes first: it used to hold the main thread for about 350 ms during
+    // load (SITE-12). Events fired before that wait in dataLayer and are sent once it arrives.
+    var fetched = false;
+    function fetchScript() {
+      if (fetched) return;
+      fetched = true;
+      var s = document.createElement("script");
+      s.async = true;
+      s.src = "https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(id);
+      document.head.appendChild(s);
+    }
+    function whenIdle() {
+      if (window.requestIdleCallback) window.requestIdleCallback(fetchScript, { timeout: 3000 });
+      else setTimeout(fetchScript, 2500);
+    }
+    if (document.readyState === "complete") whenIdle();
+    else window.addEventListener("load", whenIdle);
+    ["pointerdown", "keydown", "scroll"].forEach(function (ev) {
+      window.addEventListener(ev, fetchScript, { once: true, passive: true });
+    });
   }
 
   var tz = "";
